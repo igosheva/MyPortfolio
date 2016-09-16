@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('fonts/Proxima-Nova/ProximaNova-Black.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('fonts/Proxima-Nova/ProximaNova-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #ebebeb;
+    font-family: 'DecimaNovaPro', sans-serif;
+    height: 100%;
+    margin: 0;
+    min-width: 300px;
+    padding: 0;
+    position: relative;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
