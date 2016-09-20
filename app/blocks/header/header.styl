@@ -1,0 +1,67 @@
+/*---Basic styles for header of main-page----*/
+.header
+	position relative
+	width 100%
+	&:after
+		background url('/assets/images/stick.png') no-repeat 0 0
+		background-size cover
+		bottom 0
+		content ''
+		display block
+		height 3px
+		left 0
+		position absolute
+		right 0
+		width 100%
+	.header-content
+		line-height 119px
+		height 119px
+		vertical-align middle
+		display flex
+		justify-content space-between
+		&__title
+			display inline-block
+			vertical-align middle
+			.title-link
+				line-height 34px
+				color #58697a
+				font-size 34px
+				font-weight 700
+				text-transform uppercase
+				font-family 'helveticaneuecyr-bold', sans-serif
+				&:hover
+					color #3ba8c0
+		&__icons
+			width auto
+			display flex
+			align-items center
+/*---Styles for social icons----*/
+.header-content__icons
+	.social-icon
+		width 47px
+		height 47px
+		display inline-block
+		float right
+		margin-left 25px
+		&__inner
+			width 100%
+			height inherit
+			display block
+		&__vk
+			background url('/assets/images/vk.png') no-repeat 0 0
+			background-size contain
+			&:hover
+				background url('/assets/images/vk-hover.png') no-repeat 0 0
+				background-size contain
+		&__fb
+			background url('/assets/images/facebook.png') no-repeat 0 0
+			background-size contain
+			&:hover
+				background url('/assets/images/facebook-hover.png') no-repeat 0 0
+				background-size contain
+		&__github
+			background url('/assets/images/gihtub.png') no-repeat 0 0
+			background-size contain
+			&:hover
+				background url('/assets/images/github-hover.png') no-repeat 0 0
+				background-size contain

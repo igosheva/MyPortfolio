@@ -4,6 +4,7 @@ include page
 include scripts
 include links
 include /blocks/header/header
+include /blocks/footer/footer
 
 doctype html
 html(lang='ru')
@@ -13,4 +14,5 @@ html(lang='ru')
 
 		block content
 
+		+footer()
 	+scripts(['app.min.js'])
