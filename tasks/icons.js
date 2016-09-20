@@ -7,7 +7,7 @@ import errorHandler from 'gulp-plumber-error-handler';
 import path from 'path';
 
 gulp.task('icons', () => (
-	gulp.src('app/icons/**/*.svg')
+	gulp.src('app/common/icons/**/*.svg')
 		.pipe(plumber({errorHandler: errorHandler(`Error in 'icons' task`)}))
 		.pipe(svgSymbols({
 			title: false,
@@ -18,7 +18,7 @@ gulp.task('icons', () => (
 				'default-svg'
 			]
 		}))
-		.pipe(gulpIf(/\.styl$/, gulp.dest('app/styles/helpers')))
+		.pipe(gulpIf(/\.styl$/, gulp.dest('app/common/styles/helpers')))
 		.pipe(gulpIf(/\.svg$/, rename('icon.svg')))
 		.pipe(gulpIf(/\.svg$/, gulp.dest('dist/assets/images/')))
 ));

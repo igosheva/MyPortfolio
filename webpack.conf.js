@@ -29,7 +29,7 @@ export default function makeWebpackConfig({
 	eslint = true
 }) {
 	return {
-		entry: path.resolve('./app/scripts/app.js'),
+		entry: path.resolve('./app/common/scripts/app.js'),
 		watch,
 		debug,
 		bail: false,

@@ -14,8 +14,16 @@ import errorHandler from 'gulp-plumber-error-handler';
 
 const isDebug = process.env.NODE_ENV !== 'production';
 
+const prodImagePath = '../images/';
+const devImagePath = '/assets/images/';
+
+const prodFontsPath = '../fonts/';
+const devFontsPath = '/assets/fonts/';
+
+
 gulp.task('styles', () => (
-	gulp.src('app/styles/*.styl')
+	gulp.src(
+		'app/**/*.styl')
 		.pipe(plumber({errorHandler: errorHandler(`Error in \'styles\' task`)}))
 		.pipe(gulpIf(isDebug, sourcemaps.init()))
 		.pipe(stylus({

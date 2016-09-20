@@ -12,9 +12,17 @@ import errorHandler from 'gulp-plumber-error-handler';
 import getData from 'jade-get-data';
 import staticHash from 'gulp-static-hash';
 
+const isDebug = process.env.NODE_ENV !== 'production';
 const data = {
 	getData: getData('app/data'),
-	jv0: 'javascript:void(0);'
+	jv0: 'javascript:void(0);',
+	timestamp: Date.now(),
+	paths: {
+		images: isDebug ? '/assets/images/' : 'assets/images/',
+		styles: isDebug ? '/assets/styles/' : 'assets/styles/',
+		scripts: isDebug ? '/assets/scripts/' : 'assets/scripts/',
+		fonts: isDebug ? '/assets/fonts/' : 'assets/fonts/'
+	}
 };
 
 gulp.task('templates', () => (
@@ -35,16 +43,6 @@ gulp.task('templates', () => (
 			wrapAttributesIndentSize: 1,
 			unformatted: ['use']
 		})))
-		.pipe(gulpIf(process.env.NODE_ENV === 'production', staticHash({
-			asset: 'dist',
-			exts: ['js', 'css']
-		})))
 		.pipe(rename({dirname: '.'}))
 		.pipe(gulp.dest('dist'))
 ));
-
-gulp.task('templates:lint', () =>
-	gulp
-		.src('app/**/*.jade')
-		.pipe(pugLint())
-);

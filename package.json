@@ -118,5 +118,8 @@
     "webpack": "^1.12.9",
     "webpack-stats-logger": "^1.0.1",
     "webpack-stream": "^3.1.0"
+  },
+  "dependencies": {
+    "gulp-flatten": "^0.3.1"
   }
 }
