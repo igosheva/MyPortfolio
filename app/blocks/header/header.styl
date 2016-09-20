@@ -13,40 +13,54 @@
 		position absolute
 		right 0
 		width 100%
-	.header-content
-		line-height 119px
-		height 119px
-		vertical-align middle
+		@media only screen and (max-width: 1280px)
+			background-size contain
+	&__wrapper
 		display flex
+		height 119px
+		line-height 119px
+		margin-left auto
+		margin-right auto
+		max-width 1280px
+		vertical-align middle
+		width 95%
 		justify-content space-between
-		&__title
+		@media only screen and (max-width: 768px)
+			width 93%
+		.header-title
 			display inline-block
 			vertical-align middle
-			.title-link
-				line-height 34px
+			&__link
 				color #58697a
+				font-family 'helveticaneuecyr-bold', sans-serif
 				font-size 34px
 				font-weight 700
+				line-height 34px
 				text-transform uppercase
-				font-family 'helveticaneuecyr-bold', sans-serif
+				vertical-align middle
+				@media only screen and (max-width: 480px)
+					font-size 28px
 				&:hover
 					color #3ba8c0
-		&__icons
-			width auto
+		.header-icons
 			display flex
+			width auto
 			align-items center
 /*---Styles for social icons----*/
-.header-content__icons
+.header-icons
 	.social-icon
-		width 47px
-		height 47px
 		display inline-block
 		float right
+		height 47px
 		margin-left 25px
+		width 47px
+		@media only screen and (max-width: 768px)
+			height 37px
+			width 37px
 		&__inner
-			width 100%
-			height inherit
 			display block
+			height inherit
+			width 100%
 		&__vk
 			background url('/assets/images/vk.png') no-repeat 0 0
 			background-size contain
