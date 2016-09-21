@@ -6,6 +6,13 @@ block head
 block content
 	+b.main-content.clearfix
 		+e.wrapper
+			+b.UL.content-icons.header-icons
+				+b.LI.social-icon
+					+e.A.inner.__vk(href="https://vk.com/justanasteziya", target="_blank")
+				+b.LI.social-icon
+					+e.A.inner.__fb(href="https://www.facebook.com/just.anasteziya", target="_blank")
+				+b.LI.social-icon
+					+e.A.inner.__github(href="https://github.com/NastasiaIva?tab=repositories", target="_blank")
 			+b.about-me
 				+b.UL.content-menu
 					+e.LI.item.active-item
@@ -28,67 +35,86 @@ block content
 					+e.LI.item.__skype-item
 						+b.A.contacts-link(href='skype:anasteziya525')
 							+e.SPAN.inner anasteziya525
-			+b.main-info
-				+e.block
-					+b.H1.info-title Основная информация
-					+b.content-info
-						+e.avatarka
-						+e.UL.text-list
-							+b.LI.info-item
-								+e.SPAN.important Меня зовут:
-								+e.SPAN Игошева Анастасия Михайловна
-							+b.LI.info-item
-								+e.SPAN.important Мой возраст:
-								+e.SPAN 23 года
-							+b.LI.info-item
-								+e.SPAN.important Мой город:
-								+e.SPAN Томск, Россия
-							+b.LI.info-item
-								+e.SPAN.important Гражданство:
-								+e.SPAN Россия
-							+b.LI.info-item
-								+e.SPAN.important Моя специализация:
-								+e.SPAN FRONT-END разработчик
-							+b.LI.info-item
-								+e.SPAN.important Ключевые навыки:
-								+b.UL.skills
-									+e.LI.item html5
-									+e.LI.item css3
-									+e.LI.item jquery
-									+e.LI.item jade
-									+e.LI.item styl
-									+e.LI.item sass
-									+e.LI.item less
-									+e.LI.item gulp
-									+e.LI.item git
-				+e.block
-					+b.H1.info-title Опыт работы
-					+b.content-info
-						+b.UL.experience-list
-							+e.LI.item.__work
-								+b.experience-title
-									|ООО "ЭлеТим" - аналитик отдела инновационного развития
-								+b.experience-time Август 2015 — март 2016
-							+e.LI.item.__work
-								+b.experience-title
-									|ООО "FullStack Development" - front-end разработчик
-								+b.experience-time март 2016 — октябрь 2016
-				+e.block
-					+b.H1.info-title Образование
-					+b.content-info
-						+b.UL.experience-list
-							+e.LI.item.__education
-								+b.experience-title
-									|Высшее образование, Томский государственный университет систем управления и радиоэлектроники, Томск
-								+b.experience-time Сентябрь 2010 — июль 2016
-							+e.LI.item.__courses
-								+b.experience-title
-									|Курсы html-academy
-								+b.experience-time январь 2016 — ферваль 2016
-							+e.LI.item.__courses
-								+b.experience-title
-									|Курсы «Менеджер продаж инновационной продукции» Северского Технологического института НИЯУ МИФИ
-								+b.experience-time сентябрь 2014 — декабрь 2014
+			+b.content-page
+				+b.main-info.disabled-content#main-info
+					+e.block
+						+b.H1.info-title Основная информация
+						+b.content-info
+							+e.avatarka
+							+e.UL.text-list
+								+b.LI.info-item
+									+e.SPAN.important Меня зовут:
+									+e.SPAN Игошева Анастасия Михайловна
+								+b.LI.info-item
+									+e.SPAN.important Мой возраст:
+									+e.SPAN 23 года
+								+b.LI.info-item
+									+e.SPAN.important Мой город:
+									+e.SPAN Томск, Россия
+								+b.LI.info-item
+									+e.SPAN.important Гражданство:
+									+e.SPAN Россия
+								+b.LI.info-item
+									+e.SPAN.important Моя специализация:
+									+e.SPAN FRONT-END разработчик
+								+b.LI.info-item
+									+e.SPAN.important Ключевые навыки:
+									+b.UL.skills
+										+e.LI.item html5
+										+e.LI.item css3
+										+e.LI.item jquery
+										+e.LI.item jade
+										+e.LI.item styl
+										+e.LI.item sass
+										+e.LI.item less
+										+e.LI.item gulp
+										+e.LI.item git
+					+e.block
+						+b.H1.info-title Опыт работы
+						+b.content-info
+							+b.UL.experience-list
+								+e.LI.item.__work
+									+b.experience-title
+										|ООО "ЭлеТим" - аналитик отдела инновационного развития
+									+b.experience-time Август 2015 — март 2016
+								+e.LI.item.__work
+									+b.experience-title
+										|ООО "FullStack Development" - front-end разработчик
+									+b.experience-time Март 2016 — октябрь 2016
+					+e.block
+						+b.H1.info-title Образование
+						+b.content-info
+							+b.UL.experience-list
+								+e.LI.item.__education
+									+b.experience-title
+										|Высшее образование, ТУСУР, г.Томск, специальность "Управление инновациями", квалификация "инженер-менеджер"
+									+b.experience-time Сентябрь 2010 — июль 2016
+								+e.LI.item.__courses
+									+b.experience-title
+										|Курсы html-academy
+									+b.experience-time Январь 2016 — ферваль 2016
+								+e.LI.item.__courses
+									+b.experience-title
+										|Курсы «Менеджер продаж инновационной продукции» Северского Технологического института НИЯУ МИФИ
+									+b.experience-time Сентябрь 2014 — декабрь 2014
+				+b.main-info.portfolio-content#portfolio
+					+e.block
+						+b.H1.info-title Мои работы
+						+b.content-info
+							+e.UL.portfolio-list
+								+b.LI.portfolio-item
+									+e.A.image(href='http://fiatogroup.ru/', target="_blank")
+										+b.SPAN.image-name Fiatogroup
+									+e.A.link(href='http://fiatogroup.ru/', target="_blank") http://fiatogroup.ru/
+								+b.LI.portfolio-item
+									+e.A.image
+									+e.A.link
+								+b.LI.portfolio-item
+									+e.A.image
+									+e.A.link
+								+b.LI.portfolio-item
+									+e.A.image
+									+e.A.link
 
 
 

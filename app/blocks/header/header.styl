@@ -27,9 +27,14 @@
 		justify-content space-between
 		@media only screen and (max-width: 768px)
 			width 93%
+		@media only screen and (max-width: 480px)
+			height 55px
+			line-height 55px
 		.header-title
 			display inline-block
 			vertical-align middle
+			@media only screen and (max-width: 768px)
+				width 50%
 			&__link
 				color #58697a
 				font-family 'helveticaneuecyr-bold', sans-serif
@@ -46,6 +51,20 @@
 			display flex
 			width auto
 			align-items center
+			@media only screen and (max-width: 480px)
+				display none
+		.header-menu
+			display none
+			@media only screen and (max-width: 768px)
+				display flex
+				flex-direction column
+				justify-content center
+			&__item
+				width 25px
+				height 5px
+				background-color #58697a
+				margin-bottom 3px
+				border-radius 2px
 /*---Styles for social icons----*/
 .header-icons
 	.social-icon
@@ -57,25 +76,30 @@
 		@media only screen and (max-width: 768px)
 			height 37px
 			width 37px
+		@media only screen and (max-width: 480px)
+			height 51px
+			width 51px
+		&:first-child
+			margin-left 0
 		&__inner
 			display block
 			height inherit
 			width 100%
 		&__vk
-			background url('/assets/images/vk.png') no-repeat 0 0
+			background url('/assets/images/vk.png') no-repeat center
 			background-size contain
 			&:hover
-				background url('/assets/images/vk-hover.png') no-repeat 0 0
+				background url('/assets/images/vk-hover.png') no-repeat center
 				background-size contain
 		&__fb
-			background url('/assets/images/facebook.png') no-repeat 0 0
+			background url('/assets/images/facebook.png') no-repeat center
 			background-size contain
 			&:hover
-				background url('/assets/images/facebook-hover.png') no-repeat 0 0
+				background url('/assets/images/facebook-hover.png') no-repeat center
 				background-size contain
 		&__github
-			background url('/assets/images/gihtub.png') no-repeat 0 0
+			background url('/assets/images/gihtub.png') no-repeat center
 			background-size contain
 			&:hover
-				background url('/assets/images/github-hover.png') no-repeat 0 0
+				background url('/assets/images/github-hover.png') no-repeat center
 				background-size contain

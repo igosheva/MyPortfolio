@@ -14,6 +14,7 @@
 		max-width 1024px
 		padding-bottom 35px
 		padding-top 35px
+		position relative
 		width 100%
 		@media only screen and (max-width: 1024px)
 			width 95%
@@ -21,6 +22,9 @@
 		@media only screen and (max-width: 768px)
 			width 93%
 			flex-direction column-reverse
+		@media only screen and (max-width: 480px)
+			padding-bottom 20px
+			padding-top 20px
 		.about-me
 			margin-right 60px
 			width 26%
@@ -31,17 +35,29 @@
 			@media only screen and (max-width: 768px)
 				flex-direction column-reverse
 				align-items flex-end
-		.main-info
+			@media only screen and (max-width: 480px)
+				margin-bottom 25px
+		.content-page
 			width 70%
 			@media only screen and (max-width: 1024px)
 				width 100%
 			@media only screen and (max-width: 768px)
 				margin-bottom 25px
-			&__block
+			.main-info__block
 				background-color #eff3f7
 				border-radius 5px
 				margin-bottom 25px
+				padding 25px
 				width 100%
+				@media only screen and (max-width: 480px)
+					padding 15px
+			.disabled-content
+				display none
+		.content-icons
+			display none
+			justify-content center
+			@media only screen and (max-width: 480px)
+				display flex
 /*---Styles elements for block of about-me----*/
 .about-me
 	.content-menu
@@ -53,6 +69,31 @@
 			margin-right 5%
 		@media only screen and (max-width: 768px)
 			display none
+			background-color #fbfcfd
+			box-shadow 0.6px 2.9px 8.5px 0.5px rgba(13, 16, 7, 0.35)
+			width 238px
+			margin-right 0
+			position absolute
+			top -26px
+			right -26px
+			z-index 11
+		@media only screen and (max-width: 480px)
+			left 0
+			right 0
+			top 0
+			width 100%
+			text-align center
+		&:before
+			content none
+			@media only screen and (max-width: 768px)
+				content ''
+				position absolute
+				right 26px
+				top -24px
+				border 12px solid transparent
+				border-bottom 12px solid #3ba8c0
+			@media only screen and (max-width: 480px)
+				content none
 		&__item
 			cursor pointer
 			display inline-block
@@ -61,10 +102,8 @@
 			padding-right 10px
 			position relative
 			width 100%
-			@media only screen and (max-width: 768px)
-				border-right 2px solid #3ba8c0
 			@media only screen and (max-width: 480px)
-				border-right none
+				line-height 41px
 			&:after
 				background-color #3ba8c0
 				bottom 0
@@ -73,23 +112,14 @@
 				left 10px
 				position absolute
 				right 10px
-				@media only screen and (max-width: 768px)
-					content none
 				@media only screen and (max-width: 480px)
-					content ''
+					height 1px
 			&:first-child
 				border-top-left-radius 5px
 				border-top-right-radius 5px
-				@media only screen and (max-width: 768px)
-					border-bottom-left-radius 5px
-					border-top-right-radius 0
 			&:last-child
 				border-bottom-left-radius 5px
 				border-bottom-right-radius 5px
-				@media only screen and (max-width: 768px)
-					border-bottom-left-radius 0
-					border-top-right-radius 5px
-					border-right none
 				&:after
 					height 0
 			.item-link
@@ -102,6 +132,9 @@
 					display inline-block
 					line-height 18px
 					vertical-align middle
+					@media only screen and (max-width: 480px)
+						font-size 24px
+						line-height 24px
 			&:hover
 				.item-link
 					color #3ba8c0
@@ -203,7 +236,7 @@
 		display inline-block
 		font-size 27px
 		line-height 30px
-		padding 20px
+		padding-bottom 20px
 		position relative
 		@media only screen and (max-width: 480px)
 			font-size 24px
@@ -212,9 +245,12 @@
 			text-align center
 	.content-info
 		display flex
-		padding 25px 55px
+		padding-left 30px
+		padding-right 30px
+		padding-top 25px
 		@media only screen and (max-width: 768px)
-			padding 25px
+			padding-left 0
+			padding-right 0
 		@media only screen and (max-width: 640px)
 			flex-direction column
 		@media only screen and (max-width: 480px)
@@ -229,7 +265,7 @@
 			margin-top 10px
 			max-width 148px
 			width 100%
-			@media only screen and (max-width: 768px)
+			@media only screen and (max-width: 1024px)
 				height 200px
 				max-width 200px
 				margin-right 40px
@@ -238,12 +274,16 @@
 				margin-left auto
 				margin-top 0
 				margin-bottom 30px
+			@media only screen and (max-width: 320px)
+				height 130px
+				max-width 130px
 		.info-item
 			font-size 16px
 			line-height 25px
 			padding-bottom 10px
 			@media only screen and (max-width: 480px)
 				text-align center
+				font-size 19px
 			&__important
 				color #4a545d
 				font-size 17px
@@ -252,13 +292,15 @@
 				vertical-align top
 				@media only screen and (max-width: 480px)
 					display block
+					font-size 19px
 			.skills
 				display inline-block
 				width 50%
 				@media only screen and (max-width: 640px)
 					width 60%
 				@media only screen and (max-width: 480px)
-					width 100%
+					width 80%
+					text-align left
 				&__item
 					background-image linear-gradient(to top, #2e8ca2 0%, #2e8ca2 52%, #3ba8c0 53%, #3ba8c0 100%)
 					border-radius 5px
@@ -282,6 +324,8 @@
 				padding-bottom 24px
 				padding-left 70px
 				position relative
+				@media only screen and (max-width: 480px)
+					padding-left 55px
 				&:before
 					background-color #3ba8c0
 					content ''
@@ -301,3 +345,46 @@
 				background url('/assets/images/education.png') no-repeat center
 			&__courses:before
 				background url('/assets/images/courses.png') no-repeat center
+		&__portfolio-list
+			display flex
+			justify-content space-between
+			flex-wrap wrap
+			width 100%
+			.portfolio-item
+				width 30%
+				margin-right 5%
+				max-width 183px
+				margin-bottom 45px
+				text-align center
+				&:nth-child(3n)
+					margin-right 0
+				&__image
+					display block
+					height 129px
+					background url('/assets/images/courses.png') no-repeat center
+					background-size contain
+					margin-bottom 12px
+					border 2px solid #3ba8c0
+					border-radius 4px
+					line-height 129px
+					.image-name
+						display none
+						border 2.5px solid #eff3f7
+						border-radius 4px
+						color #eff3f7
+						font-size 12px
+						line-height 20px
+						vertical-align middle
+						padding 0 10px
+					&:hover
+						background-color rgba(1, 108, 164, 0.75)
+						.image-name
+							display inline-block
+				&__link
+					color #3ba8c0
+					font-size 13px
+					font-style italic
+.portfolio-content
+	.content-info
+		padding-left 0
+		padding-right 0
