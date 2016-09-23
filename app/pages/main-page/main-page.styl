@@ -43,33 +43,6 @@
 				width 100%
 			@media only screen and (max-width: 768px)
 				margin-bottom 25px
-			.main-info
-				display none
-				&__block
-					background-color #eff3f7
-					border-radius 5px
-					margin-bottom 25px
-					padding 25px
-					width 100%
-					@media only screen and (max-width: 480px)
-						padding 15px
-					&:last-child
-						margin-bottom 0
-				.contects-header
-					background-color #48cbe8
-					line-height 118px
-					width 100%
-					border-bottom 17px solid #67dffa
-					text-align center
-					padding 10px
-					&__title
-						display inline-block
-						vertical-align middle
-						line-height 30px
-						font-size 27px
-						color #fff
-			.active-content
-				display block
 		.content-icons
 			display none
 			justify-content center
@@ -87,7 +60,7 @@
 		@media only screen and (max-width: 768px)
 			display none
 			background-color #fbfcfd
-			box-shadow 0.6px 2.9px 8.5px 0.5px rgba(13, 16, 7, 0.35)
+			box-shadow .6px 2.9px 8.5px .5px rgba(13, 16, 7, .35)
 			width 238px
 			margin-right 0
 			position absolute
@@ -121,51 +94,13 @@
 			width 100%
 			@media only screen and (max-width: 480px)
 				line-height 41px
-			&:after
-				background-color #3ba8c0
-				bottom 0
-				content ''
-				height 2px
-				left 10px
-				position absolute
-				right 10px
-				@media only screen and (max-width: 768px)
-					right 0
-					left 0
-				@media only screen and (max-width: 480px)
-					height 1px
-			&:first-child
-				border-top-left-radius 5px
-				border-top-right-radius 5px
-			&:last-child
-				border-bottom-left-radius 5px
-				border-bottom-right-radius 5px
-				&:after
-					height 0
-			.item-link
-				color #959aa8
-				display inline-block
-				padding-left 10px
-				padding-right 10px
-				width 100%
-				&__inner
-					display inline-block
-					line-height 18px
-					vertical-align middle
-					@media only screen and (max-width: 480px)
-						font-size 24px
-						line-height 24px
-			&:hover
-				.item-link
-					color #3ba8c0
 		.active-item
 			background-color #3ba8c0
 			cursor default
 			.item-link
 				color #fff
-			&:hover
-				.item-link
-					color #fff
+			&:hover .item-link
+				color #fff
 	.contacts
 		margin-bottom 25px
 		@media only screen and (max-width: 1024px)
@@ -186,51 +121,6 @@
 			@media only screen and (max-width: 640px)
 				text-align center
 				padding-left 10px
-			&:first-child
-				border-top-left-radius 5px
-				border-top-right-radius 5px
-			&:nth-child(2)
-				@media only screen and (max-width: 768px)
-					border-bottom-left-radius 5px
-					border-top-left-radius 5px
-				@media only screen and (max-width: 640px)
-					border-bottom-left-radius 0
-					border-top-right-radius 5px
-			&:last-child
-				border-bottom-left-radius 5px
-				border-bottom-right-radius 5px
-				@media only screen and (max-width: 768px)
-					border-bottom-left-radius 0
-					border-top-right-radius 5px
-				@media only screen and (max-width: 640px)
-					border-bottom-left-radius 5px
-					border-top-right-radius 0
-			.contacts-link
-				color #fff
-				display inline-block
-				padding-left 10px
-				width 100%
-				@media only screen and (max-width: 1024px)
-					padding-left 25px
-				@media only screen and (max-width: 768px)
-					padding-left 0
-				&__inner
-					display inline-block
-					font-size 16px
-					line-height 16px
-					padding-left 35px
-					position relative
-					vertical-align middle
-					&:before
-						content ''
-						height 20px
-						left 0
-						top -3px
-						position absolute
-						width 21px
-				&:hover
-					.contacts-link__inner
-						text-decoration underline
 		&__main-item
 			background-color #3ba8c0
 			color #fff
@@ -248,6 +138,130 @@
 			background-color #51daf8
 			.contacts-link__inner:before
 				background url('/assets/images/skype.png') no-repeat center
+/*---Styles elements for items of content-menu----*/
+.content-menu__item
+	&:after
+		background-color #3ba8c0
+		bottom 0
+		content ''
+		height 2px
+		left 10px
+		position absolute
+		right 10px
+		@media only screen and (max-width: 768px)
+			right 0
+			left 0
+		@media only screen and (max-width: 480px)
+			height 1px
+	&:first-child
+		border-top-left-radius 5px
+		border-top-right-radius 5px
+	&:last-child
+		border-bottom-left-radius 5px
+		border-bottom-right-radius 5px
+		&:after
+			height 0
+	.item-link
+		color #959aa8
+		display inline-block
+		padding-left 10px
+		padding-right 10px
+		width 100%
+		&__inner
+			display inline-block
+			line-height 18px
+			vertical-align middle
+			@media only screen and (max-width: 480px)
+				font-size 24px
+				line-height 24px
+	&:hover
+		.item-link
+			color #3ba8c0
+/*---Styles elements for items of contacts----*/
+.contacts__item
+	cursor pointer
+	display inline-block
+	line-height 40px
+	padding-left 20px
+	padding-right 10px
+	width 100%
+	@media only screen and (max-width: 640px)
+		text-align center
+		padding-left 10px
+	&:first-child
+		border-top-left-radius 5px
+		border-top-right-radius 5px
+	&:nth-child(2)
+		@media only screen and (max-width: 768px)
+			border-bottom-left-radius 5px
+			border-top-left-radius 5px
+		@media only screen and (max-width: 640px)
+			border-bottom-left-radius 0
+			border-top-right-radius 5px
+	&:last-child
+		border-bottom-left-radius 5px
+		border-bottom-right-radius 5px
+		@media only screen and (max-width: 768px)
+			border-bottom-left-radius 0
+			border-top-right-radius 5px
+		@media only screen and (max-width: 640px)
+			border-bottom-left-radius 5px
+			border-top-right-radius 0
+	.contacts-link
+		color #fff
+		display inline-block
+		padding-left 10px
+		width 100%
+		@media only screen and (max-width: 1024px)
+			padding-left 25px
+		@media only screen and (max-width: 768px)
+			padding-left 0
+		&__inner
+			display inline-block
+			font-size 16px
+			line-height 16px
+			padding-left 35px
+			position relative
+			vertical-align middle
+			&:before
+				content ''
+				height 20px
+				left 0
+				top -3px
+				position absolute
+				width 21px
+		&:hover
+			.contacts-link__inner
+				text-decoration underline
+/*---Styles elements for block of content-page----*/
+.content-page
+	.main-info
+		display none
+		&__block
+			background-color #eff3f7
+			border-radius 5px
+			margin-bottom 25px
+			padding 25px
+			width 100%
+			@media only screen and (max-width: 480px)
+				padding 15px
+			&:last-child
+				margin-bottom 0
+		.contects-header
+			background-color #48cbe8
+			line-height 118px
+			width 100%
+			border-bottom 17px solid #67dffa
+			text-align center
+			padding 10px
+			&__title
+				display inline-block
+				vertical-align middle
+				line-height 30px
+				font-size 27px
+				color #fff
+	.active-content
+		display block
 /*---Styles elements for block of about-me----*/
 .main-info__block
 	.info-title
@@ -304,40 +318,6 @@
 			@media only screen and (max-width: 480px)
 				text-align center
 				font-size 19px
-			&__important
-				color #4a545d
-				font-size 17px
-				font-weight 700
-				padding-right 10px
-				vertical-align top
-				@media only screen and (max-width: 480px)
-					display block
-					font-size 19px
-			.skills
-				display inline-block
-				width 50%
-				@media only screen and (max-width: 640px)
-					width 60%
-				@media only screen and (max-width: 480px)
-					width 80%
-					text-align left
-				&__item
-					background-image linear-gradient(to top, #2e8ca2 0%, #2e8ca2 52%, #3ba8c0 53%, #3ba8c0 100%)
-					border-radius 5px
-					color #fff
-					display inline-block
-					font-size 14px
-					font-weight 700
-					line-height 20px
-					margin-bottom 5px
-					margin-right 5px
-					padding-left 15px
-					padding-right 15px
-					@media only screen and (max-width: 768px)
-						padding-left 8px
-						padding-right 8px
-					&:last-child
-						margin-right 0
 		.experience-list
 			&__item
 				font-size 15px
@@ -389,124 +369,164 @@
 					max-width 209px
 				&:last-child
 					margin-bottom 0
-				&__image
-					display block
-					height 129px
-					margin-bottom 12px
-					border 2px solid #3ba8c0
-					border-radius 4px
-					line-height 129px
-					position relative
-					@media only screen and (max-width: 1024px)
-						line-height 160px
-						height 160px
-					@media only screen and (max-width: 480px)
-						line-height 147px
-						height 147px
-					.image-name
-						display none
-						border 2.5px solid #eff3f7
-						border-radius 4px
-						color #eff3f7
-						font-size 12px
-						line-height 20px
-						vertical-align middle
-						padding 0 10px
-						z-index 11
-						position relative
-					&:hover
-						&:before
-							content''
-							position absolute
-							top 0
-							bottom 0
-							left 0
-							right 0
-							background rgba(1, 108, 164, 0.75)
-						.image-name
-							display inline-block
-				&__fiatogroup
-					background url('/assets/images/fiatogroup.png') no-repeat center
-					background-size cover
-				&__smsfinance
-					background url('/assets/images/smsfinance.png') no-repeat center
-					background-size cover
-				&__bkfon
-					background url('/assets/images/bkfon.png') no-repeat center
-					background-size cover
-				&__my-resume
-					background url('/assets/images/portfolio.png') no-repeat center
-					background-size cover
-				&__link
-					color #3ba8c0
-					font-size 13px
-					font-style italic
-					margin-bottom 10px
-					display block
-					@media only screen and (max-width: 1024px)
-						font-size 17px
-						line-height 22px
-					@media only screen and (max-width: 480px)
-						font-size 15px
-				&__preview
-					font-size 14px
-					@media only screen and (max-width: 1024px)
-						font-size 18px
-						line-height 22px
-					@media only screen and (max-width: 480px)
-						font-size 16px
 		.contacts-form
 			display flex
 			flex-wrap wrap
 			justify-content space-between
 			width 100%
-			&__item
-				width 45%
-				margin-bottom 15px
-				border none
-				.contacts-label
-					display block
-					color #959aa8
-					font-size 19px
-					line-height 22px
-					padding-bottom 5px
-					text-align left
-				.contacts-input
-					background-color #fbfcfd
-					border 1px solid #48cbe8
-					border-radius 5px
-					padding 10px
-					line-height 21px
-					font-size 13px
-					color #48cbe8
-					width 100%
-					&::-webkit-input-placeholder
-						color #48cbe8
-						font-size 13px
-						line-height 13px
-						font-family 'DecimaNovaPro', sans-serif
-					&:focus::-webkit-input-placeholder
-						opacity 0
-				.contacts-button
-					padding 5px 20px
-					background-color #48cbe8
-					border-radius 4px
-					font-size 19px
-					color #fff
-					border none
-				.disabled-button
-					background-color #849db5
-				&:last-child
-					text-align right
-			&__textarea
-				width 100%
-				.contacts-textarea
-					margin-bottom 15px
-					min-height 183px
-				.contacts-counter
-					text-align right
-					display block
-					color #48cbe8
+/*---Styles elements for block of info-item----*/
+.info-item
+	&__important
+		color #4a545d
+		font-size 17px
+		font-weight 700
+		padding-right 10px
+		vertical-align top
+		@media only screen and (max-width: 480px)
+			display block
+			font-size 19px
+	.skills
+		display inline-block
+		width 50%
+		@media only screen and (max-width: 640px)
+			width 60%
+		@media only screen and (max-width: 480px)
+			width 80%
+			text-align left
+		&__item
+			background-image linear-gradient(to top, #2e8ca2 0, #2e8ca2 52%, #3ba8c0 53%, #3ba8c0 100%)
+			border-radius 5px
+			color #fff
+			display inline-block
+			font-size 14px
+			font-weight 700
+			line-height 20px
+			margin-bottom 5px
+			margin-right 5px
+			padding-left 15px
+			padding-right 15px
+			@media only screen and (max-width: 768px)
+				padding-left 8px
+				padding-right 8px
+			&:last-child
+				margin-right 0
+/*---Styles elements for items of portfolio----*/
+.portfolio-item
+	&__image
+		display block
+		height 129px
+		margin-bottom 12px
+		border 2px solid #3ba8c0
+		border-radius 4px
+		line-height 129px
+		position relative
+		@media only screen and (max-width: 1024px)
+			line-height 160px
+			height 160px
+		@media only screen and (max-width: 480px)
+			line-height 147px
+			height 147px
+		.image-name
+			display none
+			border 2.5px solid #eff3f7
+			border-radius 4px
+			color #eff3f7
+			font-size 12px
+			line-height 20px
+			vertical-align middle
+			padding 0 10px
+			z-index 11
+			position relative
+		&:hover
+			&:before
+				content ''
+				position absolute
+				top 0
+				bottom 0
+				left 0
+				right 0
+				background rgba(1, 108, 164, .75)
+			.image-name
+				display inline-block
+	&__fiatogroup
+		background url('/assets/images/fiatogroup.png') no-repeat center
+		background-size cover
+	&__smsfinance
+		background url('/assets/images/smsfinance.png') no-repeat center
+		background-size cover
+	&__bkfon
+		background url('/assets/images/bkfon.png') no-repeat center
+		background-size cover
+	&__my-resume
+		background url('/assets/images/portfolio.png') no-repeat center
+		background-size cover
+	&__link
+		color #3ba8c0
+		font-size 13px
+		font-style italic
+		margin-bottom 10px
+		display block
+		@media only screen and (max-width: 1024px)
+			font-size 17px
+			line-height 22px
+		@media only screen and (max-width: 480px)
+			font-size 15px
+	&__preview
+		font-size 14px
+		@media only screen and (max-width: 1024px)
+			font-size 18px
+			line-height 22px
+		@media only screen and (max-width: 480px)
+			font-size 16px
+/*---Styles elements for items of contacts-form----*/
+.contacts-form
+	&__item
+		width 45%
+		margin-bottom 15px
+		border none
+		.contacts-label
+			display block
+			color #959aa8
+			font-size 19px
+			line-height 22px
+			padding-bottom 5px
+			text-align left
+		.contacts-input
+			background-color #fbfcfd
+			border 1px solid #48cbe8
+			border-radius 5px
+			padding 10px
+			line-height 21px
+			font-size 13px
+			color #48cbe8
+			width 100%
+			&::-webkit-input-placeholder
+				color #48cbe8
+				font-size 13px
+				line-height 13px
+				font-family 'DecimaNovaPro', sans-serif
+			&:focus::-webkit-input-placeholder
+				opacity 0
+		.contacts-button
+			padding 5px 20px
+			background-color #48cbe8
+			border-radius 4px
+			font-size 19px
+			color #fff
+			border none
+		.disabled-button
+			background-color #849db5
+		&:last-child
+			text-align right
+	&__textarea
+		width 100%
+		.contacts-textarea
+			margin-bottom 15px
+			min-height 183px
+		.contacts-counter
+			text-align right
+			display block
+			color #48cbe8
 .portfolio-content
 	.content-info
 		padding-left 0
