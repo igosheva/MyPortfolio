@@ -50,10 +50,9 @@ head
 
 	- var stylesPrefix = paths.styles;
 
+	link(href=stylesPrefix + 'app.min.css' rel='stylesheet')
 	block head
 	title= pageTitle || ''
+
 	meta(name='description' content=pageDescription || '')
 	meta(name='keywords' content=pageKeywords || '')
-	link(href=stylesPrefix + 'app.min.css' rel='stylesheet')
-
-	link(href='/assets/styles/app.min.css' rel='stylesheet')

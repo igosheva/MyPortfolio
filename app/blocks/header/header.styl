@@ -59,12 +59,18 @@
 				display flex
 				flex-direction column
 				justify-content center
+				cursor pointer
 			&__item
 				width 25px
 				height 5px
 				background-color #58697a
 				margin-bottom 3px
 				border-radius 2px
+			&:hover, &:active, &:focus
+				.header-menu__item
+					background-color #3ba8c0
+			.menu-active
+				background-color #3ba8c0
 /*---Styles for social icons----*/
 .header-icons
 	.social-icon

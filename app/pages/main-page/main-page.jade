@@ -14,14 +14,14 @@ block content
 				+b.LI.social-icon
 					+e.A.inner.__github(href="https://github.com/NastasiaIva?tab=repositories", target="_blank")
 			+b.about-me
-				+b.UL.content-menu
-					+e.LI.item.active-item
+				+b.UL.content-menu#content-menu
+					+e.LI.item.js-item-link.active-item#about
 						+b.A.item-link
 							+e.SPAN.inner Обо мне
-					+e.LI.item
+					+e.LI.item.js-item-link#works
 						+b.A.item-link
 							+e.SPAN.inner Мои работы
-					+e.LI.item
+					+e.LI.item.js-item-link#contacts
 						+b.A.item-link
 							+e.SPAN.inner Связаться со мной
 				+b.UL.contacts
@@ -35,8 +35,8 @@ block content
 					+e.LI.item.__skype-item
 						+b.A.contacts-link(href='skype:anasteziya525')
 							+e.SPAN.inner anasteziya525
-			+b.content-page
-				+b.main-info.disabled-content#main-info
+			+b.content-page#content-page
+				+b.main-info.active-content#page-about
 					+e.block
 						+b.H1.info-title Основная информация
 						+b.content-info
@@ -69,6 +69,7 @@ block content
 										+e.LI.item less
 										+e.LI.item gulp
 										+e.LI.item git
+										+e.LI.item PixelPerfect
 					+e.block
 						+b.H1.info-title Опыт работы
 						+b.content-info
@@ -97,25 +98,53 @@ block content
 									+b.experience-title
 										|Курсы «Менеджер продаж инновационной продукции» Северского Технологического института НИЯУ МИФИ
 									+b.experience-time Сентябрь 2014 — декабрь 2014
-				+b.main-info.portfolio-content#portfolio
+				+b.main-info.portfolio-content#page-works
 					+e.block
-						+b.H1.info-title Мои работы
+						+b.H2.info-title Мои работы
 						+b.content-info
 							+e.UL.portfolio-list
 								+b.LI.portfolio-item
-									+e.A.image(href='http://fiatogroup.ru/', target="_blank")
+									+e.A.image.__fiatogroup(href='http://fiatogroup.ru/', target="_blank")
 										+b.SPAN.image-name Fiatogroup
 									+e.A.link(href='http://fiatogroup.ru/', target="_blank") http://fiatogroup.ru/
+									+e.P.preview Сайт аренды коммерческой недвижимости
 								+b.LI.portfolio-item
-									+e.A.image
-									+e.A.link
+									+e.A.image.__smsfinance(href='https://www.smsfinance.ru/', target="_blank")
+										+b.SPAN.image-name Smsfinance
+									+e.A.link(href='https://www.smsfinance.ru/', target="_blank") https://www.smsfinance.ru/
+									+e.P.preview Официальный сайт компании Smsfinance
 								+b.LI.portfolio-item
-									+e.A.image
-									+e.A.link
+									+e.A.image.__bkfon(href='http://bkfon.ru/ru/', target="_blank")
+										+b.SPAN.image-name Bkfon
+									+e.A.link(href='http://bkfon.ru/ru/', target="_blank") http://bkfon.ru/ru/
+									+e.P.preview Официальный сайт компании Bkfon
 								+b.LI.portfolio-item
-									+e.A.image
-									+e.A.link
-
+									+e.A.image.__my-resume(href='../main-page.html', target="_blank")
+										+b.SPAN.image-name My portfolio
+									+e.A.link(href='../main-page.html', target="_blank") ../main-page.html
+									+e.P.preview Мое портфолио
+				+b.main-info#page-contacts
+					+b.contects-header
+						+e.H2.title У вас интересный проект? Напишите мне
+					+e.block
+						+b.content-info
+							+b.FORM.contacts-form(method='post', action='')
+								+e.FIELDSET.item
+									+b.LABEL.contacts-label Имя
+									+b.INPUT.contacts-input(name="name", type="text", placeholder="Как к вам обращаться", required)
+								+e.FIELDSET.item
+									+b.LABEL.contacts-label Email
+									+b.INPUT.contacts-input(name="email", type="text", placeholder="Куда мне писать", required)
+								+e.FIELDSET.item.__textarea
+									+b.LABEL.contacts-label Сообщение
+									+b.TEXTAREA.contacts-input.contacts-textarea#textarea(name="textarea", type="text", maxlength='500',  placeholder="Кратко в чем суть", required)
+									+b.contacts-counter
+										+e.SPAN#counter
+										|/500
+								+e.FIELDSET.item
+									+b.BUTTON.contacts-button Отправить
+								+e.FIELDSET.item
+									+b.BUTTON.contacts-button.disabled-button Очистить
 
 
 

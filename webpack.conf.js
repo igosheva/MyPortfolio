@@ -29,13 +29,11 @@ export default function makeWebpackConfig({
 	eslint = true
 }) {
 	return {
-		entry: path.resolve('./app/common/scripts/app.js'),
 		watch,
 		debug,
 		bail: false,
 		profile: true,
 		output: {
-			path: path.resolve('./dist/assets/scripts/'),
 			filename: 'app.min.js',
 			pathinfo: false
 		},
@@ -54,14 +52,18 @@ export default function makeWebpackConfig({
 			loaders: [{
 				test: /\.js$/,
 				loader: 'happypack/loader',
-				exclude: /node_modules/
+				exclude: [
+					path.resolve(__dirname, 'node_modules'),
+				]
 			}, {
 				test: /\.json$/,
 				loader: 'json'
 			}, eslint && {
 				test: /\.js$/,
 				loader: 'eslint-loader',
-				exclude: /node_modules/
+				exclude: [
+					path.resolve(__dirname, 'node_modules'),
+				]
 			}, {
 				test: require.resolve('jquery'),
 				loader: 'expose?$!expose?jQuery'

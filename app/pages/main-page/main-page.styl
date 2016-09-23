@@ -26,7 +26,7 @@
 			padding-bottom 20px
 			padding-top 20px
 		.about-me
-			margin-right 60px
+			margin-right 4%
 			width 26%
 			@media only screen and (max-width: 1024px)
 				margin-right 0
@@ -43,16 +43,33 @@
 				width 100%
 			@media only screen and (max-width: 768px)
 				margin-bottom 25px
-			.main-info__block
-				background-color #eff3f7
-				border-radius 5px
-				margin-bottom 25px
-				padding 25px
-				width 100%
-				@media only screen and (max-width: 480px)
-					padding 15px
-			.disabled-content
+			.main-info
 				display none
+				&__block
+					background-color #eff3f7
+					border-radius 5px
+					margin-bottom 25px
+					padding 25px
+					width 100%
+					@media only screen and (max-width: 480px)
+						padding 15px
+					&:last-child
+						margin-bottom 0
+				.contects-header
+					background-color #48cbe8
+					line-height 118px
+					width 100%
+					border-bottom 17px solid #67dffa
+					text-align center
+					padding 10px
+					&__title
+						display inline-block
+						vertical-align middle
+						line-height 30px
+						font-size 27px
+						color #fff
+			.active-content
+				display block
 		.content-icons
 			display none
 			justify-content center
@@ -112,6 +129,9 @@
 				left 10px
 				position absolute
 				right 10px
+				@media only screen and (max-width: 768px)
+					right 0
+					left 0
 				@media only screen and (max-width: 480px)
 					height 1px
 			&:first-child
@@ -147,11 +167,13 @@
 				.item-link
 					color #fff
 	.contacts
+		margin-bottom 25px
 		@media only screen and (max-width: 1024px)
 			width 45%
 		@media only screen and (max-width: 768px)
 			width 100%
 			display flex
+			margin-bottom 0
 		@media only screen and (max-width: 640px)
 			flex-direction column
 		&__item
@@ -228,8 +250,6 @@
 				background url('/assets/images/skype.png') no-repeat center
 /*---Styles elements for block of about-me----*/
 .main-info__block
-	&:last-child
-		margin-bottom 0
 	.info-title
 		border-bottom 2px solid #3ba8c0
 		color #3ba8c0
@@ -350,23 +370,39 @@
 			justify-content space-between
 			flex-wrap wrap
 			width 100%
+			@media only screen and (max-width: 768px)
+				justify-content space-around
+			@media only screen and (max-width: 480px)
+				flex-direction column
+				align-items center
 			.portfolio-item
 				width 30%
-				margin-right 5%
 				max-width 183px
 				margin-bottom 45px
 				text-align center
-				&:nth-child(3n)
-					margin-right 0
+				@media only screen and (max-width: 1024px)
+					max-width 228px
+				@media only screen and (max-width: 768px)
+					width 47%
+				@media only screen and (max-width: 480px)
+					width 100%
+					max-width 209px
+				&:last-child
+					margin-bottom 0
 				&__image
 					display block
 					height 129px
-					background url('/assets/images/courses.png') no-repeat center
-					background-size contain
 					margin-bottom 12px
 					border 2px solid #3ba8c0
 					border-radius 4px
 					line-height 129px
+					position relative
+					@media only screen and (max-width: 1024px)
+						line-height 160px
+						height 160px
+					@media only screen and (max-width: 480px)
+						line-height 147px
+						height 147px
 					.image-name
 						display none
 						border 2.5px solid #eff3f7
@@ -376,14 +412,101 @@
 						line-height 20px
 						vertical-align middle
 						padding 0 10px
+						z-index 11
+						position relative
 					&:hover
-						background-color rgba(1, 108, 164, 0.75)
+						&:before
+							content''
+							position absolute
+							top 0
+							bottom 0
+							left 0
+							right 0
+							background rgba(1, 108, 164, 0.75)
 						.image-name
 							display inline-block
+				&__fiatogroup
+					background url('/assets/images/fiatogroup.png') no-repeat center
+					background-size cover
+				&__smsfinance
+					background url('/assets/images/smsfinance.png') no-repeat center
+					background-size cover
+				&__bkfon
+					background url('/assets/images/bkfon.png') no-repeat center
+					background-size cover
+				&__my-resume
+					background url('/assets/images/portfolio.png') no-repeat center
+					background-size cover
 				&__link
 					color #3ba8c0
 					font-size 13px
 					font-style italic
+					margin-bottom 10px
+					display block
+					@media only screen and (max-width: 1024px)
+						font-size 17px
+						line-height 22px
+					@media only screen and (max-width: 480px)
+						font-size 15px
+				&__preview
+					font-size 14px
+					@media only screen and (max-width: 1024px)
+						font-size 18px
+						line-height 22px
+					@media only screen and (max-width: 480px)
+						font-size 16px
+		.contacts-form
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			width 100%
+			&__item
+				width 45%
+				margin-bottom 15px
+				border none
+				.contacts-label
+					display block
+					color #959aa8
+					font-size 19px
+					line-height 22px
+					padding-bottom 5px
+					text-align left
+				.contacts-input
+					background-color #fbfcfd
+					border 1px solid #48cbe8
+					border-radius 5px
+					padding 10px
+					line-height 21px
+					font-size 13px
+					color #48cbe8
+					width 100%
+					&::-webkit-input-placeholder
+						color #48cbe8
+						font-size 13px
+						line-height 13px
+						font-family 'DecimaNovaPro', sans-serif
+					&:focus::-webkit-input-placeholder
+						opacity 0
+				.contacts-button
+					padding 5px 20px
+					background-color #48cbe8
+					border-radius 4px
+					font-size 19px
+					color #fff
+					border none
+				.disabled-button
+					background-color #849db5
+				&:last-child
+					text-align right
+			&__textarea
+				width 100%
+				.contacts-textarea
+					margin-bottom 15px
+					min-height 183px
+				.contacts-counter
+					text-align right
+					display block
+					color #48cbe8
 .portfolio-content
 	.content-info
 		padding-left 0

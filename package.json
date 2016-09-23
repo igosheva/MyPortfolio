@@ -122,6 +122,7 @@
   "dependencies": {
     "gulp-concat": "^2.6.0",
     "gulp-flatten": "^0.3.1",
-    "gulp-replace": "^0.5.4"
+    "gulp-replace": "^0.5.4",
+    "jquery": "^2.2.4"
   }
 }
