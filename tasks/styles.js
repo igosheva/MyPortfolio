@@ -18,10 +18,10 @@ import concat from 'gulp-concat';
 const isDebug = process.env.NODE_ENV !== 'production';
 
 const prodImagePath = '../images/';
-const devImagePath = '/assets/images/';
+const devImagePath = 'assets/images/';
 
 const prodFontsPath = '../fonts/';
-const devFontsPath = '/assets/fonts/';
+const devFontsPath = 'assets/fonts/';
 
 const pathsToCssToLoad = [
 	// 'app/common/scripts/vendor/jquery-ui/css/base/*.css',
