@@ -50,7 +50,7 @@
 		<header class="header">
 			<div class="header__wrapper">
 				<div class="header-title">
-					<a href="../main-page.html" class="header-title__link">Nastya_Iva</a>
+					<a href="https://nastasiaiva.github.io/Resume/main-page.html" class="header-title__link">Nastya_Iva ❦</a>
 				</div>
 				<ul class="header-icons">
 					<li class="social-icon">
@@ -207,6 +207,27 @@
 						<div class="content-info">
 							<ul class="content-info__portfolio-list">
 								<li class="portfolio-item">
+									<a href="https://nastasiaiva.github.io/jwood/index.html" target="_blank" class="portfolio-item__image portfolio-item__jwood">
+										<span class="image-name">JWOODPhotography</span>
+									</a>
+									<a href="https://nastasiaiva.github.io/jwood/index.html" target="_blank" class="portfolio-item__link">https://nastasiaiva.github.io/jwood/index.html</a>
+									<p class="portfolio-item__preview">Портфолио фотографа Jason Wood</p>
+								</li>
+								<li class="portfolio-item">
+									<a href="https://nastasiaiva.github.io/Resume/main-page.html" target="_blank" class="portfolio-item__image portfolio-item__my-resume">
+										<span class="image-name">My portfolio</span>
+									</a>
+									<a href="https://nastasiaiva.github.io/Resume/main-page.html" target="_blank" class="portfolio-item__link">https://nastasiaiva.github.io/Resume/main-page.html</a>
+									<p class="portfolio-item__preview">Мое портфолио</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-info__block">
+						<h2 class="info-title">Коммерческие проекты</h2>
+						<div class="content-info">
+							<ul class="content-info__portfolio-list">
+								<li class="portfolio-item">
 									<a href="http://fiatogroup.ru/" target="_blank" class="portfolio-item__image portfolio-item__fiatogroup">
 										<span class="image-name">Fiatogroup</span>
 									</a>
@@ -227,53 +248,41 @@
 									<a href="http://bkfon.ru/ru/" target="_blank" class="portfolio-item__link">http://bkfon.ru/ru/</a>
 									<p class="portfolio-item__preview">Официальный сайт компании Bkfon</p>
 								</li>
-								<li class="portfolio-item">
-									<a href="https://nastasiaiva.github.io/Resume/main-page.html" target="_blank" class="portfolio-item__image portfolio-item__jwood">
-										<span class="image-name">JWOODPhotography</span>
-									</a>
-									<a href="https://nastasiaiva.github.io/jwood/index.html" target="_blank" class="portfolio-item__link">https://nastasiaiva.github.io/jwood/index.html</a>
-									<p class="portfolio-item__preview">Портфолио фотографа Jason Wood</p>
-								</li>
-								<li class="portfolio-item">
-									<a href="https://nastasiaiva.github.io/Resume/main-page.html" target="_blank" class="portfolio-item__image portfolio-item__my-resume">
-										<span class="image-name">My portfolio</span>
-									</a>
-									<a href="https://nastasiaiva.github.io/Resume/main-page.html" target="_blank" class="portfolio-item__link">https://nastasiaiva.github.io/Resume/main-page.html</a>
-									<p class="portfolio-item__preview">Мое портфолио</p>
-								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div id="page-contacts" class="main-info">
 					<div class="contects-header">
-						<h2 class="contects-header__title">У вас интересный проект? Напишите мне</h2>
+						<h2 class="contects-header__title contacts-title">У вас есть интересный проект? Я буду рада в нем поучаствовать!</h2>
 					</div>
 					<div class="main-info__block">
 						<div class="content-info">
 							<form method="post" action="" class="contacts-form">
 								<fieldset class="contacts-form__item">
+									<input name="name" type="text" placeholder="Как к вам обращаться" required="required" class="contacts-input" />
 									<label class="contacts-label">Имя</label>
-									<input name="name" type="text" placeholder="Как к вам обращаться" required="required" class="contacts-input"
-									/>
 								</fieldset>
 								<fieldset class="contacts-form__item">
+									<input name="email" type="text" placeholder="Куда мне писать" required="required" class="contacts-input" />
 									<label class="contacts-label">Email</label>
-									<input name="email" type="text" placeholder="Куда мне писать" required="required" class="contacts-input"
-									/>
 								</fieldset>
 								<fieldset class="contacts-form__item contacts-form__textarea">
+									<textarea id="textarea" name="textarea" type="text" maxlength="500" placeholder="Опишите кратко суть проекта" required="required"
+										class="contacts-input contacts-textarea"></textarea>
 									<label class="contacts-label">Сообщение</label>
-									<textarea id="textarea" name="textarea" type="text" maxlength="500" placeholder="Кратко в чем суть"
-										required="required" class="contacts-input contacts-textarea"></textarea>
 									<div class="contacts-counter">
 										<span id="counter"></span>/500</div>
 								</fieldset>
 								<fieldset class="contacts-form__item">
-									<button class="contacts-button">Отправить</button>
+									<button class="contacts-button disabled-button">
+										<span class="contacts-button__text">Очистить</span>
+									</button>
 								</fieldset>
 								<fieldset class="contacts-form__item">
-									<button class="contacts-button disabled-button">Очистить</button>
+									<button class="contacts-button">
+										<span class="contacts-button__text">Отправить</span>
+									</button>
 								</fieldset>
 							</form>
 						</div>

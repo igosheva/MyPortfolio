@@ -3,8 +3,10 @@
 	position relative
 	width 100%
 	&:after
-		background url('../images/stick.png') no-repeat 0 0
-		background-size cover
+		/*background url('../images/stick.png') no-repeat 0 0
+		background-size cover*/
+		background-color #1c667a
+		background-image linear-gradient(to right, rgba(28, 102, 122, .9) 0, rgba(246, 250, 254, .9) 0, rgba(216, 216, 216, .9) 0, rgba(242, 246, 250, .9) 0, rgba(28, 102, 122, .9) 48%, rgba(242, 246, 250, .9) 100%)
 		bottom 0
 		content ''
 		display block
@@ -35,14 +37,19 @@
 			vertical-align middle
 			@media only screen and (max-width: 768px)
 				width 50%
+			@media only screen and (max-width: 480px)
+				width 80%
 			&__link
 				color #58697a
 				font-family 'felt_tip_womanregular', sans-serif
-				font-size 40px
+				font-size 44px
 				font-weight 700
-				line-height 34px
+				line-height 44px
 				text-transform uppercase
 				vertical-align middle
+				text-shadow 4px 4px 6px rgba(0, 0, 0, .3)
+				@media only screen and (max-width: 640px)
+					font-size 36px
 				@media only screen and (max-width: 480px)
 					font-size 28px
 				&:hover
@@ -51,6 +58,10 @@
 			display flex
 			width auto
 			align-items center
+			min-width 200px
+			justify-content space-between
+			@media only screen and (max-width: 768px)
+				min-width 150px
 			@media only screen and (max-width: 480px)
 				display none
 		.header-menu
@@ -79,12 +90,25 @@
 		height 47px
 		margin-left 25px
 		width 47px
+		border-radius 50%
+		box-shadow 5px 10px 20px rgba(0, 0, 0, .3), -5px -10px 20px rgba(255, 255, 255, .5)
+		&:hover
+			height 51px
+			width 51px
 		@media only screen and (max-width: 768px)
 			height 37px
 			width 37px
+			margin-left 15px
+			&:hover
+				height 44px
+				width 44px
 		@media only screen and (max-width: 480px)
 			height 51px
 			width 51px
+			margin-left 25px
+			&:hover
+				height 58px
+				width 58px
 		&:first-child
 			margin-left 0
 		&__inner
