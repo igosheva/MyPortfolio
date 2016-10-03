@@ -83,71 +83,75 @@
 						<a href="https://github.com/NastasiaIva?tab=repositories" target="_blank" class="social-icon__inner social-icon__github"></a>
 					</li>
 				</ul>
-				<div class="about-me">
-					<ul id="content-menu" class="content-menu">
-						<li id="about" class="content-menu__item js-item-link active-item">
-							<a class="item-link">
-								<span class="item-link__inner">Обо мне</span>
-							</a>
-						</li>
-						<li id="works" class="content-menu__item js-item-link">
-							<a class="item-link">
-								<span class="item-link__inner">Мои работы</span>
-							</a>
-						</li>
-						<li id="contacts" class="content-menu__item js-item-link">
-							<a class="item-link">
-								<span class="item-link__inner">Связаться со мной</span>
-							</a>
-						</li>
-					</ul>
-					<ul class="contacts">
-						<li class="contacts__item contacts__main-item">Контакты</li>
-						<li class="contacts__item contacts__mail-item">
-							<a href="mailto: just_anasteziya@mail.ru" class="contacts-link">
-								<span class="contacts-link__inner">just_anasteziya@mail.ru</span>
-							</a>
-						</li>
-						<li class="contacts__item contacts__phone-item">
-							<a href="tel: +7(952)183-86-94" class="contacts-link">
-								<span class="contacts-link__inner">+7-952-183-86-94</span>
-							</a>
-						</li>
-						<li class="contacts__item contacts__skype-item">
-							<a href="skype:anasteziya525" class="contacts-link">
-								<span class="contacts-link__inner">anasteziya525</span>
-							</a>
-						</li>
-					</ul>
-				</div>
+				<aside class="sidebar">
+					<nav class="sidebar__navigation">
+						<ul id="content-menu" class="navigation-menu">
+							<li data-class="about" class="navigation-menu__item js-menu-item active">
+								<a class="item-link js-item-link">
+									<span class="item-link__inner">Обо мне</span>
+								</a>
+							</li>
+							<li data-class="works" class="navigation-menu__item js-menu-item">
+								<a class="item-link js-item-link">
+									<span class="item-link__inner">Мои работы</span>
+								</a>
+							</li>
+							<li data-class="contacts" class="navigation-menu__item js-menu-item">
+								<a class="item-link js-item-link">
+									<span class="item-link__inner">Связаться со мной</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<address class="sidebar__address">
+						<ul class="address-list">
+							<li class="address-list__item address-list__main-item">Контакты</li>
+							<li class="address-list__item address-list__mail-item">
+								<a href="mailto: just_anasteziya@mail.ru" class="address-link">
+									<span class="address-link__inner">just_anasteziya@mail.ru</span>
+								</a>
+							</li>
+							<li class="address-list__item address-list__phone-item">
+								<a href="tel: +7(952)183-86-94" class="address-link">
+									<span class="address-link__inner">+7-952-183-86-94</span>
+								</a>
+							</li>
+							<li class="address-list__item address-list__skype-item">
+								<a href="skype:anasteziya525" class="address-link">
+									<span class="address-link__inner">anasteziya525</span>
+								</a>
+							</li>
+						</ul>
+					</address>
+				</aside>
 				<div id="content-page" class="content-page">
-					<div id="page-about" class="main-info active-content">
+					<div class="main-info active js-main-info main-info__about">
 						<div class="main-info__block">
 							<h1 class="info-title">Основная информация</h1>
 							<div class="content-info">
 								<div class="content-info__avatarka"></div>
 								<ul class="content-info__text-list">
-									<li class="info-item">
+									<li class="info-item clearfix">
 										<span class="info-item__important">Меня зовут:</span>
-										<span>Игошева Анастасия Михайловна</span>
+										<span class="info-item__value">Игошева Анастасия Михайловна</span>
 									</li>
-									<li class="info-item">
+									<li class="info-item clearfix">
 										<span class="info-item__important">Мой возраст:</span>
-										<span>23 года</span>
+										<span class="info-item__value">23 года</span>
 									</li>
-									<li class="info-item">
+									<li class="info-item clearfix">
 										<span class="info-item__important">Мой город:</span>
-										<span>Томск, Россия</span>
+										<span class="info-item__value">Томск, Россия</span>
 									</li>
-									<li class="info-item">
+									<li class="info-item clearfix">
 										<span class="info-item__important">Гражданство:</span>
-										<span>Россия</span>
+										<span class="info-item__value">Россия</span>
 									</li>
-									<li class="info-item">
+									<li class="info-item clearfix">
 										<span class="info-item__important">Моя специализация:</span>
-										<span>FRONT-END разработчик</span>
+										<span class="info-item__value">FRONT-END разработчик</span>
 									</li>
-									<li class="info-item">
+									<li class="info-item clearfix">
 										<span class="info-item__important">Ключевые навыки:</span>
 										<ul class="skills">
 											<li class="skills__item">html5</li>
@@ -201,7 +205,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="page-works" class="main-info portfolio-content">
+				<div class="main-info js-main-info portfolio-content main-info__works">
 					<div class="main-info__block">
 						<h2 class="info-title">Мои работы</h2>
 						<div class="content-info">
@@ -219,6 +223,9 @@
 									</a>
 									<a href="https://nastasiaiva.github.io/Resume/main-page.html" target="_blank" class="portfolio-item__link">https://nastasiaiva.github.io/Resume/main-page.html</a>
 									<p class="portfolio-item__preview">Мое портфолио</p>
+								</li>
+								<li class="portfolio-item">
+									<a class="portfolio-item__image portfolio-item__new-project js-show-project"></a>
 								</li>
 							</ul>
 						</div>
@@ -248,17 +255,20 @@
 									<a href="http://bkfon.ru/ru/" target="_blank" class="portfolio-item__link">http://bkfon.ru/ru/</a>
 									<p class="portfolio-item__preview">Официальный сайт компании Bkfon</p>
 								</li>
+								<li class="portfolio-item">
+									<a class="portfolio-item__image portfolio-item__new-project js-show-project"></a>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div id="page-contacts" class="main-info">
+				<div class="main-info js-main-info main-info__contacts">
 					<div class="contects-header">
 						<h2 class="contects-header__title contacts-title">У вас есть интересный проект? Я буду рада в нем поучаствовать!</h2>
 					</div>
 					<div class="main-info__block">
 						<div class="content-info">
-							<form method="post" action="" class="contacts-form">
+							<form id="contact-me" method="post" action="" class="contacts-form">
 								<fieldset class="contacts-form__item">
 									<input name="name" type="text" placeholder="Как к вам обращаться" required="required" class="contacts-input" />
 									<label class="contacts-label">Имя</label>
@@ -289,13 +299,101 @@
 					</div>
 				</div>
 			</div>
+			<div class="cat">
+				<div class="cat__wrapper">
+					<div class="cat-head">
+						<div class="cat-head__ear"></div>
+						<div class="cat-head__content">
+							<div class="eyes">
+								<div class="eyes__left"></div>
+								<div class="eyes__right"></div>
+							</div>
+							<div class="nose"></div>
+							<div class="mouth"></div>
+							<div class="mustache-left"></div>
+							<div class="mustache-right"></div>
+						</div>
+					</div>
+					<div class="cat-body">
+						<div class="cat-body__legs"></div>
+					</div>
+					<div class="paw-left"></div>
+					<div class="paw-right"></div>
+					<div class="cat-tail"></div>
+					<div class="cat-brush"></div>
+				</div>
+			</div>
 		</div>
 		</div>
 		<footer class="footer">
 			<div class="footer__wrapper">
+				<a class="castle-authorization js-show-authorization"></a>
 				<span class="footer-content">© 2016. Это сайт Игошевой Анастасии. Пожалуйста, не копируйте и не воруйте его</span>
 			</div>
 		</footer>
+		<div class="popup js-authorization-popup">
+			<a class="popup__wrapper js-close-authorization"></a>
+			<div class="popup__content popup__authorization-content">
+				<button class="popup-close js-close-authorization"></button>
+				<div class="authorization-header">
+					<div class="authorization-header__title">Авторизируйтесь</div>
+				</div>
+				<form method="post" action="" class="contacts-form authorization-form">
+					<fieldset class="contacts-form__item authorization-item">
+						<label class="contacts-label">Логин</label>
+						<input name="login" type="text" placeholder="Логин" required="required" class="contacts-input" />
+					</fieldset>
+					<fieldset class="contacts-form__item authorization-item">
+						<label class="contacts-label">Пароль</label>
+						<input name="password" type="password" placeholder="Пароль" required="required" class="contacts-input"
+						/>
+					</fieldset>
+					<fieldset class="contacts-form__item authorization-item">
+						<button class="contacts-button">
+							<span class="contacts-button__text">Отправить</span>
+						</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="popup js-project-popup">
+			<a class="popup__wrapper js-close-project"></a>
+			<div class="popup__content popup__project-content">
+				<button class="popup-close js-close-project"></button>
+				<div class="project-header">
+					<div class="project-header__title">Добавление проекта</div>
+				</div>
+				<form method="post" action="" class="contacts-form project-form">
+					<fieldset class="contacts-form__item project-item">
+						<label class="contacts-label">Название проекта</label>
+						<input name="name" type="text" placeholder="Введите название" required="required" class="contacts-input"
+						/>
+					</fieldset>
+					<fieldset class="contacts-form__item project-item">
+						<label class="contacts-label">Картинка проекта</label>
+						<input name="picture" type="text" placeholder="Загрузите изображение" required="required" class="contacts-input"
+						/>
+					</fieldset>
+					<fieldset class="contacts-form__item project-item">
+						<label class="contacts-label">URL проекта</label>
+						<input name="url" type="text" placeholder="Добавьте ссылку" required="required" class="contacts-input"
+						/>
+					</fieldset>
+					<fieldset class="contacts-form__item contacts-form__textarea project-item">
+						<label class="contacts-label">Описание</label>
+						<textarea id="commentTextarea" name="textarea" type="text" maxlength="200" placeholder="Пара слов о Вашем проекте"
+							required="required" class="contacts-input contacts-textarea"></textarea>
+						<div class="contacts-counter">
+							<span id="commentCounter"></span>/200</div>
+					</fieldset>
+					<fieldset class="contacts-form__item project-item">
+						<button class="contacts-button">
+							<span class="contacts-button__text">Добавить</span>
+						</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
 	</body>
 	<script src="assets/scripts/app.min.js"></script>
 
