@@ -1,5 +1,5 @@
 import $ from 'jquery';
-$('#page-about').show();
+
 $('#header-menu').click(function () {
 	$('.header-menu__item').toggleClass('menu-active');
 	$('#content-menu').slideToggle(100);
@@ -8,19 +8,18 @@ $('#header-menu').click(function () {
 		$('.header-menu__item').removeClass('menu-active');
 	});
 });
-$('.js-item-link').click(function () {
-	$(this).addClass('active-item').siblings('.js-item-link').removeClass('active-item');
-	$('.main-info').hide();
-	$('#page-' + $(this).attr('id')).show();
-	return false;
+
+$('.js-item-link').on('click', function (g) {
+	let item = $(this).closest('.js-menu-item'),
+			contentItem = $('.js-main-info'),
+			itemPosition = item.data('class');
+
+	contentItem.filter('.main-info__' +itemPosition)
+		.add(item)
+		.addClass('active')
+		.siblings()
+		.removeClass('active');
 });
-/*let windowSize = $(document).width();
-$(window).resize(function(){
-	windowSize = $(document).width();
-	if (windowSize > 768) {
-		$('#content-menu').css('display','block');
-	}
-});*/
 
 //  ========================
 //  Счетчик символов письма
@@ -43,3 +42,118 @@ $(window).resize(function(){
 			$("#counter").html(cnt);
 		}
 	});
+
+let myModule = (function () {
+	let init = function () {
+		_setUpListners();
+	};
+	let _setUpListners = function () {
+	};
+	return {
+		init:init
+	}
+});
+myModule.init();
+
+/*let validation = (function () {
+
+	//Инициализирует модуль
+	let init = function () {
+		_setUpListners();
+	};
+
+	//Прослушивает события
+	let _setUpListners = function () {
+	};
+
+	//Создает тултипы
+	let _cteatQtip = function (element, position) {
+
+		if (position === 'right') {
+			position = {
+				my: 'left center',
+				at: 'right center'
+			}
+		} else {
+			position = {
+				my: 'right center',
+				at: 'left center'
+			}
+		}
+		element.qtip({
+			content: {
+				text:function() {
+					return $(this).attr('qtip-content')
+				}
+			},
+			show: {
+				event: 'show'
+			},
+			hide: {
+				event: 'keydown hideTooltip'
+			},
+			position: position,
+			style: {
+				classes: 'qtip-mystyle qtip-rounded',
+				lip: {
+					height: 10,
+					width: 16
+				}
+			}
+		}).trigger('show');
+	};
+
+	//Универсальная функция
+	let validateForm = function (form) {
+		console.log('Привет! Я в модуле валидации, проверяю форму');
+		let elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
+			valid = true;
+
+		//Пройдемся по всем элементам формы
+		$.each(elements, function (index, val) {
+			console.log(index);
+			console.log(val);
+		})
+	};
+
+	//Возвращает объект(публичные методы)
+	return {
+		init:init,
+		validateForm: validateForm
+	}
+});
+validation.init();*/
+
+let contactMe = (function () {
+	let init = function () {
+		_setUpListners();
+	};
+
+	//Прослушиает события
+	let _setUpListners = function () {
+		$('#contact-me').on('submit', _submitForm);
+	};
+
+	//Проверяет форму на валидность
+	let _submitForm = function(ev){
+		console.log('Отправка формы');
+		ev.preventDefault();
+
+		let form = $(this),
+			url = 'contactme.php',
+			defObj = _ajaxForm(form, url);
+
+		//Что-то будем делать с ответом сервера defObj
+	};
+	let _ajaxForm = function(form, url) {
+		console.log('ajax запрос, но с проверкой!');
+		if(validation.validateForm(form)) return false;
+		//если false - то код ниже не произойдет никогда
+	};
+
+	//Возвращает объект(публичные методы)
+	return {
+		init:init
+	}
+});
+contactMe.init();

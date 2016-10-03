@@ -13,51 +13,53 @@ block content
 					+e.A.inner.__fb(href="https://www.facebook.com/just.anasteziya", target="_blank")
 				+b.LI.social-icon
 					+e.A.inner.__github(href="https://github.com/NastasiaIva?tab=repositories", target="_blank")
-			+b.about-me
-				+b.UL.content-menu#content-menu
-					+e.LI.item.js-item-link.active-item#about
-						+b.A.item-link
-							+e.SPAN.inner Обо мне
-					+e.LI.item.js-item-link#works
-						+b.A.item-link
-							+e.SPAN.inner Мои работы
-					+e.LI.item.js-item-link#contacts
-						+b.A.item-link
-							+e.SPAN.inner Связаться со мной
-				+b.UL.contacts
-					+e.LI.item.__main-item Контакты
-					+e.LI.item.__mail-item
-						+b.A.contacts-link(href='mailto: just_anasteziya@mail.ru')
-							+e.SPAN.inner just_anasteziya@mail.ru
-					+e.LI.item.__phone-item
-						+b.A.contacts-link(href='tel: +7(952)183-86-94')
-							+e.SPAN.inner +7-952-183-86-94
-					+e.LI.item.__skype-item
-						+b.A.contacts-link(href='skype:anasteziya525')
-							+e.SPAN.inner anasteziya525
+			+b.ASIDE.sidebar
+				+e.NAV.navigation
+					+b.UL.navigation-menu#content-menu
+						+e.LI.item.js-menu-item.active(data-class='about')
+							+b.A.item-link.js-item-link
+								+e.SPAN.inner Обо мне
+						+e.LI.item.js-menu-item(data-class='works')
+							+b.A.item-link.js-item-link
+								+e.SPAN.inner Мои работы
+						+e.LI.item.js-menu-item(data-class='contacts')
+							+b.A.item-link.js-item-link
+								+e.SPAN.inner Связаться со мной
+				+e.ADDRESS.address
+					+b.UL.address-list
+						+e.LI.item.__main-item Контакты
+						+e.LI.item.__mail-item
+							+b.A.address-link(href='mailto: just_anasteziya@mail.ru')
+								+e.SPAN.inner just_anasteziya@mail.ru
+						+e.LI.item.__phone-item
+							+b.A.address-link(href='tel: +7(952)183-86-94')
+								+e.SPAN.inner +7-952-183-86-94
+						+e.LI.item.__skype-item
+							+b.A.address-link(href='skype:anasteziya525')
+								+e.SPAN.inner anasteziya525
 			+b.content-page#content-page
-				+b.main-info.active-content#page-about
+				+b.main-info.active.js-main-info.main-info__about
 					+e.block
 						+b.H1.info-title Основная информация
 						+b.content-info
 							+e.avatarka
 							+e.UL.text-list
-								+b.LI.info-item
+								+b.LI.info-item.clearfix
 									+e.SPAN.important Меня зовут:
-									+e.SPAN Игошева Анастасия Михайловна
-								+b.LI.info-item
+									+e.SPAN.value Игошева Анастасия Михайловна
+								+b.LI.info-item.clearfix
 									+e.SPAN.important Мой возраст:
-									+e.SPAN 23 года
-								+b.LI.info-item
+									+e.SPAN.value 23 года
+								+b.LI.info-item.clearfix
 									+e.SPAN.important Мой город:
-									+e.SPAN Томск, Россия
-								+b.LI.info-item
+									+e.SPAN.value Томск, Россия
+								+b.LI.info-item.clearfix
 									+e.SPAN.important Гражданство:
-									+e.SPAN Россия
-								+b.LI.info-item
+									+e.SPAN.value Россия
+								+b.LI.info-item.clearfix
 									+e.SPAN.important Моя специализация:
-									+e.SPAN FRONT-END разработчик
-								+b.LI.info-item
+									+e.SPAN.value FRONT-END разработчик
+								+b.LI.info-item.clearfix
 									+e.SPAN.important Ключевые навыки:
 									+b.UL.skills
 										+e.LI.item html5
@@ -98,7 +100,7 @@ block content
 									+b.experience-title
 										|Курсы «Менеджер продаж инновационной продукции» Северского Технологического института НИЯУ МИФИ
 									+b.experience-time Сентябрь 2014 — декабрь 2014
-				+b.main-info.portfolio-content#page-works
+				+b.main-info.js-main-info.portfolio-content.main-info__works
 					+e.block
 						+b.H2.info-title Мои работы
 						+b.content-info
@@ -113,6 +115,8 @@ block content
 										+b.SPAN.image-name My portfolio
 									+e.A.link(href='https://nastasiaiva.github.io/Resume/main-page.html', target="_blank") https://nastasiaiva.github.io/Resume/main-page.html
 									+e.P.preview Мое портфолио
+								+b.LI.portfolio-item
+									+e.A.image.__new-project.js-show-project
 					+e.block
 						+b.H2.info-title Коммерческие проекты
 						+b.content-info
@@ -132,12 +136,14 @@ block content
 										+b.SPAN.image-name Bkfon
 									+e.A.link(href='http://bkfon.ru/ru/', target="_blank") http://bkfon.ru/ru/
 									+e.P.preview Официальный сайт компании Bkfon
-				+b.main-info#page-contacts
+								+b.LI.portfolio-item
+									+e.A.image.__new-project.js-show-project
+				+b.main-info.js-main-info.main-info__contacts
 					+b.contects-header
 						+e.H2.title.contacts-title У вас есть интересный проект? Я буду рада в нем поучаствовать!
 					+e.block
 						+b.content-info
-							+b.FORM.contacts-form(method='post', action='')
+							+b.FORM.contacts-form#contact-me(method='post', action='')
 								+e.FIELDSET.item
 									+b.INPUT.contacts-input(name="name", type="text", placeholder="Как к вам обращаться", required)
 									+b.LABEL.contacts-label Имя
@@ -156,6 +162,23 @@ block content
 								+e.FIELDSET.item
 									+b.BUTTON.contacts-button
 										+e.SPAN.text Отправить
-
+			+b.cat
+				+e.wrapper
+					+b.cat-head
+						+e.ear
+						+e.content
+							+b.eyes
+								+e.left
+								+e.right
+							+b.nose
+							+b.mouth
+							+b.mustache-left
+							+b.mustache-right
+					+b.cat-body
+						+e.legs
+					+b.paw-left
+					+b.paw-right
+					+b.cat-tail
+					+b.cat-brush
 
 

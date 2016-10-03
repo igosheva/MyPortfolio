@@ -1,8 +1,7 @@
 /*---Styles for content of main-page----*/
 .main-content
-	/*background url('../images/background.png') no-repeat 0 0*/
-	background linear-gradient(45deg, #EECFBA, #C5DDE8)
-	background-size cover
+	background url('../images/background.png') repeat 0 0
+	/*background linear-gradient(45deg, #EECFBA, #C5DDE8)*/
 	display table-row
 	font-size 18px
 	height 100%
@@ -26,7 +25,7 @@
 		@media only screen and (max-width: 480px)
 			padding-bottom 20px
 			padding-top 20px
-		.about-me
+		.sidebar
 			margin-right 4%
 			width 26%
 			@media only screen and (max-width: 1024px)
@@ -49,15 +48,25 @@
 			min-height 60px
 			@media only screen and (max-width: 480px)
 				display flex
+		.cat
+			position absolute
+			bottom 10px
+			left 20px
+			display inline-block
+			width 140px
+			height 200px
+			z-index 11
+			@media only screen and (max-width: 768px)
+				display none
 /*---Styles elements for block of about-me----*/
-.about-me
-	.content-menu
-		/*background-color #eff3f7*/
+.sidebar
+	&__navigation
+		display inline-block
+		border-radius 5px
+		overflow hidden
 		background radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #CAE4D8)
 		margin-bottom 25px
 		box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
-		display inline-block
-		border-radius 5px
 		@media only screen and (max-width: 1024px)
 			width 49%
 			margin-right 5%
@@ -77,98 +86,90 @@
 			top 0
 			width 100%
 			text-align center
-		&:before
-			content none
-			@media only screen and (max-width: 768px)
-				content ''
-				position absolute
-				right 26px
-				top -24px
-				border 12px solid transparent
-				border-bottom 12px solid #3ba8c0
-			@media only screen and (max-width: 480px)
+		.navigation-menu
+			&:before
 				content none
-		&__item
-			cursor pointer
-			display inline-block
-			line-height 73px
-			padding-left 10px
-			padding-right 10px
-			position relative
-			width 100%
-			@media only screen and (max-width: 480px)
-				line-height 41px
-		.active-item
-			background-color #3ba8c0
-			cursor default
-			.item-link
-				color #fff
-			&:hover .item-link
-				color #fff
-	.contacts
+				@media only screen and (max-width: 768px)
+					content ''
+					position absolute
+					right 26px
+					top -24px
+					border 12px solid transparent
+					border-bottom 12px solid #3ba8c0
+				@media only screen and (max-width: 480px)
+					content none
+			&__item
+				cursor pointer
+				display inline-block
+				line-height 73px
+				padding-left 10px
+				padding-right 10px
+				position relative
+				width 100%
+				@media only screen and (max-width: 480px)
+					line-height 41px
+				&.active
+					background-color #3ba8c0
+					cursor default
+					.item-link
+						color #fff
+					&:hover .item-link
+						color #fff
+	&__address
 		margin-bottom 25px
 		box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
 		display inline-block
 		vertical-align top
 		border-radius 5px
+		overflow hidden
 		@media only screen and (max-width: 1024px)
 			width 45%
 		@media only screen and (max-width: 768px)
 			width 100%
-			display flex
 			margin-bottom 0
-		@media only screen and (max-width: 640px)
-			flex-direction column
-		&__item
-			cursor pointer
-			display inline-block
-			line-height 40px
-			padding-left 20px
-			padding-right 10px
+		.address-list
 			width 100%
 			@media only screen and (max-width: 768px)
-				&:after
-					content none
+				display flex
 			@media only screen and (max-width: 640px)
-				text-align center
-				padding-left 10px
-				&:after
-					content ''
-			&:last-child
-				&:after
-					content none
-		&__main-item
-			background-color #3ba8c0
-			color #fff
-			@media only screen and (max-width: 768px)
-				display none
-		&__mail-item
-			background-color #41b9d4
-			.contacts-link__inner:before
-				background url('../images/mail.png') no-repeat center
-		&__phone-item
-			background-color #48cbe8
-			.contacts-link__inner:before
-				background url('../images/phone.png') no-repeat center
-		&__skype-item
-			background-color #51daf8
-			.contacts-link__inner:before
-				background url('../images/skype.png') no-repeat center
+				flex-direction column
+			&__item
+				cursor pointer
+				display inline-block
+				line-height 40px
+				padding-left 20px
+				padding-right 10px
+				width 100%
+				@media only screen and (max-width: 768px)
+					&:after
+						content none
+				@media only screen and (max-width: 640px)
+					text-align center
+					padding-left 10px
+					&:after
+						content ''
+				&:last-child
+					&:after
+						content none
+			&__main-item
+				background-color #3ba8c0
+				color #fff
+				@media only screen and (max-width: 768px)
+					display none
+			&__mail-item
+				background-color #41b9d4
+				.address-link__inner:before
+					background url('../images/mail.png') no-repeat center
+			&__phone-item
+				background-color #48cbe8
+				.address-link__inner:before
+					background url('../images/phone.png') no-repeat center
+			&__skype-item
+				background-color #51daf8
+				.address-link__inner:before
+					background url('../images/skype.png') no-repeat center
 /*---Styles elements for items of content-menu----*/
-.content-menu__item
-	/*&:after
-		background-color #3ba8c0
-		bottom 0
-		content ''
-		height 2px
-		left 10px
-		position absolute
-		right 10px
-		@media only screen and (max-width: 768px)
-			right 0
-			left 0
-		@media only screen and (max-width: 480px)
-			height 1px*/
+.navigation-menu__item
 	&:after
 		width 100%
 		height 2px
@@ -178,14 +179,8 @@
 		content ''
 		background-color #1c667a
 		background-image linear-gradient(to right, rgba(28, 102, 122, .9) 0, rgba(246, 250, 254, .9) 0, rgba(216, 216, 216, .9) 0, rgba(242, 246, 250, .9) 0, rgba(28, 102, 122, .9) 48%, rgba(242, 246, 250, .9) 100%)
-	&:first-child
-		border-top-left-radius 5px
-		border-top-right-radius 5px
-	&:last-child
-		border-bottom-left-radius 5px
-		border-bottom-right-radius 5px
-		&:after
-			content none
+	&:last-child:after
+		content none
 	.item-link
 		color #959aa8
 		display inline-block
@@ -202,8 +197,8 @@
 	&:hover
 		.item-link
 			color #3ba8c0
-/*---Styles elements for items of contacts----*/
-.contacts__item
+/*---Styles elements for items of address-list----*/
+.address-list__item
 	cursor pointer
 	display inline-block
 	line-height 40px
@@ -222,26 +217,7 @@
 		bottom 0
 		content ''
 		background-image linear-gradient(to right, rgba(211, 212, 218, 0), rgba(211, 212, 218, .8) 40%, rgba(211, 212, 218, .8) 60%, rgba(211, 212, 218, 0));
-	&:first-child
-		border-top-left-radius 5px
-		border-top-right-radius 5px
-	&:nth-child(2)
-		@media only screen and (max-width: 768px)
-			border-bottom-left-radius 5px
-			border-top-left-radius 5px
-		@media only screen and (max-width: 640px)
-			border-bottom-left-radius 0
-			border-top-right-radius 5px
-	&:last-child
-		border-bottom-left-radius 5px
-		border-bottom-right-radius 5px
-		@media only screen and (max-width: 768px)
-			border-bottom-left-radius 0
-			border-top-right-radius 5px
-		@media only screen and (max-width: 640px)
-			border-bottom-left-radius 5px
-			border-top-right-radius 0
-	.contacts-link
+	.address-link
 		color #fff
 		display inline-block
 		padding-left 10px
@@ -265,7 +241,7 @@
 				position absolute
 				width 21px
 		&:hover
-			.contacts-link__inner
+			.address-link__inner
 				text-decoration underline
 /*---Styles elements for block of content-page----*/
 .content-page
@@ -279,6 +255,7 @@
 			padding 25px
 			width 100%
 			box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
+			overflow hidden
 			@media only screen and (max-width: 480px)
 				padding 15px
 			&:last-child
@@ -297,9 +274,9 @@
 				line-height 30px
 				font-size 27px
 				color #fff
-	.active-content
-		display block
-/*---Styles elements for block of about-me----*/
+		&.active
+			display block
+/*---Styles elements for block of sidebar----*/
 .main-info__block
 	.info-title
 		border-bottom 2px solid #3ba8c0
@@ -322,7 +299,6 @@
 		@media only screen and (max-width: 768px)
 			padding-left 0
 			padding-right 0
-		@media only screen and (max-width: 640px)
 			flex-direction column
 		@media only screen and (max-width: 480px)
 			padding-top 0
@@ -340,7 +316,7 @@
 				height 200px
 				max-width 200px
 				margin-right 40px
-			@media only screen and (max-width: 640px)
+			@media only screen and (max-width: 768px)
 				margin-right auto
 				margin-left auto
 				margin-top 0
@@ -431,9 +407,19 @@
 		font-weight 700
 		padding-right 10px
 		vertical-align top
+		float left
 		@media only screen and (max-width: 480px)
 			display block
 			font-size 19px
+			float none
+	&__value
+		float left
+		max-width 250px
+		overflow hidden
+		@media only screen and (max-width: 480px)
+			display block
+			float none
+			max-width none
 	.skills
 		display inline-block
 		width 50%
@@ -512,6 +498,13 @@
 	&__my-resume
 		background url('../images/portfolio.png') no-repeat center
 		background-size cover
+	&__new-project
+		background url('../images/new-project.png') no-repeat center
+		background-size cover
+		border none
+		cursor pointer
+		&:hover:before
+			content none
 	&__link
 		color #3ba8c0
 		font-size 13px
@@ -640,3 +633,244 @@
 		bottom 0
 		content ''
 		background-image linear-gradient(to right, rgba(211, 212, 218, 0), rgba(211, 212, 218, .8) 40%, rgba(211, 212, 218, .8) 60%, rgba(211, 212, 218, 0));
+/*---Styles elements for cat----*/
+.cat__wrapper
+	position relative
+	width 100%
+	height 100%
+	.cat-head
+		position absolute
+		-webkit-animation rotar-head 3s alternate infinite
+		animation rotar-head 3s alternate infinite
+		&__ear
+			position absolute
+			width 50px
+			height 40px
+			background #212121
+			border 5px solid rgb(150, 147, 147)
+			border-radius 300px 3000px
+			-webkit-transform rotate(33deg)
+			transform rotate(33deg)
+			margin 5px 25px
+			&:before
+				content ''
+				position absolute
+				width 50px
+				height 40px
+				background #212121
+				border 5px solid rgb(150, 147, 147)
+				border-radius 3000px 300px
+				-webkit-transform rotate(-66deg)
+				transform rotate(-66deg)
+				margin -26px 35px
+		&__content
+			position absolute
+			width 90px
+			height 80px
+			border-radius 50% 50% 50% 50% / 60% 60% 40% 40%
+			background rgb(150, 147, 147)
+			margin 21px 30px
+			animation rotar-content 3s alternate infinite
+			-webkit-animation rotar-content 3s alternate infinite
+	.cat-body
+		position absolute
+		display block
+		width 60px
+		height 80px
+		border-radius 50% 50% 50% 50% / 60% 60% 40% 40%
+		background rgb(150, 147, 147)
+		margin 90px 45px
+		&:before
+			content ''
+			display block
+			width 80px
+			height 55px
+			border-radius 100%
+			background rgb(150, 147, 147)
+			margin 35px -9px
+		&__legs
+			position absolute
+			width 35px
+			height 16px
+			border-radius 12px
+			background rgb(150, 147, 147)
+			margin -50px -14px
+			&:before
+				content ''
+				position absolute
+				width 35px
+				height 16px
+				border-radius 12px
+				background rgb(150, 147, 147)
+				margin 0 55px
+	.paw-left, .paw-right
+		position absolute
+		display block
+		width 16px
+		height 60px
+		border-radius 50% 50% 50% 50% / 60% 60% 40% 40%
+		background rgb(150, 147, 147)
+		border 1px solid #212121
+	.paw-left
+		margin 121px 55px
+		-webkit-transform rotate(172deg)
+		transform rotate(172deg)
+	.paw-right
+		margin 121px 77px
+		-webkit-transform rotate(-172deg)
+		transform rotate(-172deg)
+	.cat-tail
+		position absolute
+		width 60px
+		height 16px
+		border-radius 21px
+		background #212121
+		margin 132px 12px
+		-webkit-transform rotate(50deg)
+		transform rotate(50deg)
+		z-index -1
+	.cat-brush
+		position absolute
+		width 21px
+		height 21px
+		border-radius 100%
+		background rgb(150, 147, 147)
+		-webkit-animation rotar-brush 3s alternate infinite
+		animation rotar-brush 3s alternate infinite
+		margin 112px 12px
+/*---Styles elements for cat-head----*/
+.cat-head__content
+	.eyes
+		margin 30px 7px
+		transform rotate(9deg)
+		animation rotar-eyes 1.2s alternate infinite
+		position absolute
+		display block
+		width 30px
+		height 25px
+		border-radius 50% 50% 50% 50% / 60% 60% 40% 40%
+		background white
+		&:before
+			margin -6px 46px
+			transform rotate(-18deg)
+			content ''
+			position absolute
+			display block
+			width 30px
+			height 25px
+			border-radius 50% 50% 50% 50% / 60% 60% 40% 40%
+			background white
+		&__left, &__right
+			position absolute
+			width 25px
+			height 21px
+			border-radius 100px
+			background black
+			&:before
+				content ''
+				display block
+				width 16px
+				height 8px
+				border-radius 16px 16px 0 0
+				border-top 5px solid white
+			&:after
+				content ''
+				display block
+				width 12px
+				height 6px
+				border-radius 0 0 9px 9px
+				border-bottom 5px solid gray
+		&__left
+			margin 1px 2px
+			&:before
+				transform rotate(-30deg)
+				margin 3px
+			&:after
+				transform rotate(-30deg)
+				margin -9px 9px
+		&__right
+			margin -5px 48px
+			&:before
+				transform rotate(30deg)
+				margin 3px 7px
+			&:after
+				transform rotate(30deg)
+				margin -9px 4px
+	.nose
+		position absolute
+		width 14px
+		height 9px
+		border-radius 50% 50% 50% 50% / 60% 60% 40% 40%
+		background #ff6666
+		margin 40px 38px
+		z-index 11
+		&:before, &:after
+			content ''
+			position absolute
+			width 21px
+			height 21px
+			border-radius 100%
+			background #121212
+		&:before
+			margin 3px -12px
+		&:after
+			margin 3px 4px
+	.mouth
+		position absolute
+		width 14px
+		height 7px
+		border-radius 0 0 12px 12px
+		background #ff6666
+		border 1px solid #333
+		margin 60px 37px
+		animation rotar-mouth 3s alternate infinite
+	.mustache-left, .mustache-right
+		position absolute
+		width 43px
+		height 2px
+		background black
+		&:before
+			content ''
+			position absolute
+			width 33px
+			height 2px
+			background black
+			margin 4px 5px
+	.mustache-left
+		margin 60px -9px
+		&:before
+			transform rotate(-21deg)
+	.mustache-right
+		margin 60px 55px
+		&:before
+			transform rotate(21deg)
+/*---Styles keyframes for cat----*/
+@keyframes rotar-head
+	0%
+		transform rotate(3deg)
+	50%
+		transform rotate(0deg)
+	100%
+		transform rotate(-3deg)
+@keyframes rotar-content
+	0%
+		transform rotate(-7deg)
+	50%
+		transform rotate(0deg)
+	100%
+		transform rotate(7deg)
+@keyframes rotar-eyes
+	0%, 25%, 70%
+		opacity 1
+	45%
+		opacity 0
+@keyframes rotar-mouth
+	0%
+		transform translatey(0px)
+	70%
+		transform translatey(-9px)
+@keyframes rotar-brush
+	0%
+		transform translatey(0px) translatex(0px)
+	70%
+		transform translatey(-5px) translatex(3px)

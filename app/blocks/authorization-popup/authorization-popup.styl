@@ -1,0 +1,74 @@
+/*--------BASIC STYLES FOR POP-UP--------*/
+.popup
+	display none
+	&__wrapper
+		background-color black
+		display block
+		left 0
+		min-height 100%
+		min-width 1860px
+		opacity .5
+		position fixed
+		top 0
+		width 100%
+		z-index 10
+	&__content
+		background-clip border-box
+		border-radius 5px
+		overflow hidden
+		box-shadow 0 4px 6px 0 rgba(0, 0, 0, .09999999999999998)
+		height initial
+		left 50%
+		outline none
+		position fixed
+		top 10%
+		transform translate(-50%, -5%)
+		width 100%
+		z-index 1050
+		@media only screen and (max-width: 768px)
+			width 95%
+		.popup-close
+			position absolute
+			right 10px
+			top 10px
+			width 25px
+			height 25px
+			border none
+			background url('/assets/images/close.png') no-repeat center
+			cursor pointer
+/*--------Styles for authorization-popup--------*/
+.popup__authorization-content
+	max-width 590px
+	background-color #eff3f7
+	.authorization-header
+		background-color #48cbe8
+		line-height 100px
+		padding-top 15px
+		padding-bottom 15px
+		border-bottom 15px solid #67dffa
+		text-align center
+		&__title
+			line-height 40px
+			color #fff
+			vertical-align middle
+			font-size 30px
+	.authorization-form
+		padding 20px
+		.authorization-item
+			margin-left auto
+			margin-right auto
+			text-align center
+			.contacts-label
+				opacity 1
+				transition none
+				font-size 22px
+				position relative
+				text-align center
+				top 0
+				left 0
+			.contacts-input
+				margin-top 15px
+			.contacts-button
+				margin-top 15px
+			&:last-child
+				margin-bottom 0
