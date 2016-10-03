@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be5e44f4-b766-4b91-b769-a0466f0cb344" name="Default" comment="setting of project">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/facebook.png" afterPath="" />
+    <list default="true" id="be5e44f4-b766-4b91-b769-a0466f0cb344" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/icons/main/facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/castle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/new-project.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/icons/main/stick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/stick.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/app.min.js" afterPath="$PROJECT_DIR$/assets/scripts/app.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/app.min.js.map" afterPath="$PROJECT_DIR$/assets/scripts/app.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/app.min.css" afterPath="$PROJECT_DIR$/assets/styles/app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main-page.html" afterPath="$PROJECT_DIR$/main-page.html" />
     </list>
     <ignored path="Master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,28 +35,7 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="authorization-popup.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/blocks/authorization-popup/authorization-popup.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-page.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1295">
-              <caret line="395" column="14" selection-start-line="395" selection-start-column="14" selection-end-line="395" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -479,14 +464,21 @@
       <option name="project" value="LOCAL" />
       <updated>1474886887303</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="correct project">
+      <created>1475482795284</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1475482795284</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2119522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2119522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -525,7 +517,8 @@
     <MESSAGE value="add ew styles for mobile version and add DIST" />
     <MESSAGE value="delite DIST" />
     <MESSAGE value="setting of project" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting of project" />
+    <MESSAGE value="correct project" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -879,18 +872,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/blocks/authorization-popup/authorization-popup.jade">
+    <entry file="file://$PROJECT_DIR$/main-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="472">
+          <caret line="396" column="11" selection-start-line="396" selection-start-column="11" selection-end-line="396" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main-page.html">
+    <entry file="file://$PROJECT_DIR$/app/blocks/authorization-popup/authorization-popup.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1295">
-          <caret line="395" column="14" selection-start-line="395" selection-start-column="14" selection-end-line="395" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
