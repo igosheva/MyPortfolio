@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 $('.js-project-popup').hide();
 $('.js-show-project').click(function () {
-	$('.js-project-popup').show('1000');
+	$('.js-authorization-popup').show('1000');
 	return false;
 });
 $('.js-close-project').click(function () {

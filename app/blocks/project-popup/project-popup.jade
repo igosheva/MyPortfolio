@@ -5,13 +5,14 @@ mixin project-popup()
 			+b.BUTTON.popup-close.js-close-project
 			+b.project-header
 				+e.title Добавление проекта
-			+b.FORM.contacts-form.project-form(method='post', action='')
+			+b.FORM.contacts-form.project-form(method='post', action='')#addproject
 				+e.FIELDSET.item.project-item
 					+b.LABEL.contacts-label Название проекта
 					+b.INPUT.contacts-input(name="name", type="text", placeholder="Введите название", required)
 				+e.FIELDSET.item.project-item
 					+b.LABEL.contacts-label Картинка проекта
-					+b.INPUT.contacts-input(name="picture", type="text", placeholder="Загрузите изображение", required)
+					+b.INPUT.contacts-input.picture-input(name="picture", type="file", placeholder="Загрузите изображение", required)
+					+b.I.picture-icon
 				+e.FIELDSET.item.project-item
 					+b.LABEL.contacts-label URL проекта
 					+b.INPUT.contacts-input(name="url", type="text", placeholder="Добавьте ссылку", required)
@@ -22,5 +23,5 @@ mixin project-popup()
 						+e.SPAN#commentCounter
 						|/200
 				+e.FIELDSET.item.project-item
-					+b.BUTTON.contacts-button
+					+b.BUTTON.contacts-button(type="submit")
 						+e.SPAN.text Добавить

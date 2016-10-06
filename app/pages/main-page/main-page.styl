@@ -64,7 +64,7 @@
 		display inline-block
 		border-radius 5px
 		overflow hidden
-		background radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #CAE4D8)
+		background radial-gradient(circle farthest-corner at 100px 50px, #fff, #CAE4D8)
 		margin-bottom 25px
 		box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
 		@media only screen and (max-width: 1024px)
@@ -249,7 +249,7 @@
 		display none
 		&__block
 			/*background-color #eff3f7*/
-			background radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #CAE4D8)
+			background radial-gradient(circle farthest-corner at 100px 50px, #fff, #CAE4D8)
 			border-radius 5px
 			margin-bottom 25px
 			padding 25px
@@ -498,9 +498,12 @@
 	&__my-resume
 		background url('../images/portfolio.png') no-repeat center
 		background-size cover
-	&__new-project
-		background url('../images/new-project.png') no-repeat center
+	&__cat
+		background url('../images/cat.png') no-repeat center
 		background-size cover
+	&__new-project
+		background url('../images/new-projects.png') no-repeat center
+		background-size contain
 		border none
 		cursor pointer
 		&:hover:before
@@ -553,6 +556,7 @@
 			color #48cbe8
 			width 100%
 			margin-top 30px
+			overflow hidden
 			&::-webkit-input-placeholder
 				color #48cbe8
 				font-size 14px

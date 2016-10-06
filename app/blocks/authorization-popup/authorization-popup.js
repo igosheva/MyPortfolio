@@ -8,3 +8,7 @@ $('.js-show-authorization').click(function () {
 $('.js-close-authorization').click(function () {
 	$('.js-authorization-popup').hide('100');
 });
+$('.js-button-authorization').click(function () {
+	$('.js-authorization-popup').hide('100');
+	$('.js-project-popup').show('100');
+});

@@ -48,6 +48,11 @@ let myModule = (function () {
 		_setUpListners();
 	};
 	let _setUpListners = function () {
+		$('#addproject').on('submit', _addProject); //добавление проекта
+	};
+	let _addProject = function (ev) {
+		console.log('добавление проекта');
+		ev.preventDefault(); //отменить стандартное поведение
 	};
 	return {
 		init:init
