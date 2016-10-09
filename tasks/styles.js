@@ -24,6 +24,7 @@ const prodFontsPath = '../fonts/';
 const devFontsPath = 'assets/fonts/';
 
 const pathsToCssToLoad = [
+	'node_modules/qtip2/dist/jquery.qtip.css'
 	// 'app/common/scripts/vendor/jquery-ui/css/base/*.css',
 	// 'app/common/scripts/vendor/jquery-ui-timepicker-addon.css',
 	// 'node_modules/bxslider/dist/jquery.bxslider.css',

@@ -47,7 +47,6 @@
 				line-height 44px
 				text-transform uppercase
 				vertical-align middle
-				text-shadow 4px 4px 6px rgba(0, 0, 0, .3)
 				@media only screen and (max-width: 640px)
 					font-size 36px
 				@media only screen and (max-width: 480px)
@@ -90,25 +89,33 @@
 		height 44px
 		margin-left 25px
 		width 44px
-		border-radius 50%
-		box-shadow 5px 10px 20px rgba(0, 0, 0, .3), -5px -10px 20px rgba(255, 255, 255, .5)
+		overflow hidden
+		border-radius 20%
+		box-shadow 1px 3px 5px rgba(0, 0, 0, .3), -1px -1px 5px rgba(0, 0, 0, .3)
 		&:hover
-			height 47px
-			width 47px
+			height 40px
+			width 40px
 		@media only screen and (max-width: 768px)
-			height 37px
-			width 37px
+			height 40px
+			width 40px
 			margin-left 15px
 			&:hover
-				height 44px
-				width 44px
+				height 36px
+				width 36px
+		@media only screen and (max-width: 640px)
+			height 34px
+			width 34px
+			margin-left 15px
+			&:hover
+				height 32px
+				width 32px
 		@media only screen and (max-width: 480px)
 			height 44px
 			width 44px
 			margin-left 25px
 			&:hover
-				height 47px
-				width 47px
+				height 40px
+				width 40px
 		&:first-child
 			margin-left 0
 		&__inner
@@ -116,20 +123,14 @@
 			height inherit
 			width 100%
 		&__vk
-			background url('../images/vk.png') no-repeat center
+			background url('../images/vk_3.png') no-repeat center
 			background-size contain
-			&:hover
-				background url('../images/vk-hover.png') no-repeat center
-				background-size contain
 		&__fb
-			background url('../images/facebook.png') no-repeat center
+			background url('../images/fb_3.png') no-repeat center
 			background-size contain
-			&:hover
-				background url('../images/facebook-hover.png') no-repeat center
-				background-size contain
 		&__github
-			background url('../images/gihtub.png') no-repeat center
+			background url('../images/github_3.png') no-repeat center
 			background-size contain
-			&:hover
-				background url('../images/github-hover.png') no-repeat center
-				background-size contain
+		&__instagram
+			background url('../images/instagram.png') no-repeat center
+			background-size contain

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'imports?jQuery=jquery!qtip2';
 
 $('#header-menu').click(function () {
 	$('.header-menu__item').toggleClass('menu-active');
@@ -44,23 +45,72 @@ $('.js-item-link').on('click', function (g) {
 	});
 
 let myModule = (function () {
+	//Инициализирует наш модуль
 	let init = function () {
 		_setUpListners();
 	};
-	let _setUpListners = function () {
+
+	//Прослушивает события
+	let _setUpListners = function (e) {
 		$('#addproject').on('submit', _addProject); //добавление проекта
 	};
-	let _addProject = function (ev) {
+
+	//Добавляет проект
+	let _addProject = function (e) {
 		console.log('добавление проекта');
-		ev.preventDefault(); //отменить стандартное поведение
+		e.preventDefault(); //отменить стандартное поведение
+
+		//объявляем переменные
+		let form = $(this),
+				url = 'api/add_project.php',
+				myServerGiveMeAnAnswer = _ajaxForm(form, url);
+
+		//ajax-запрос на сервер
+		myServerGiveMeAnAnswer.done(function (ans) {
+			console.log(ans);
+
+			let successBox = form.find('.success-mes'),
+					errorBox = form.find('.error-mes');
+			if(ans.status === 'ок') {
+				errorBox.hide();
+				successBox.text(ans.text).show();
+			}else{
+				successBox.hide();
+				errorBox.text(ans.text).show();
+			}
+		})
 	};
+
+	//Универсальная функция
+	//Для ее работы используется @form - форма, адрес php-файла, к которому мы обращаемся
+	//1.Собрать данные из формы
+	//2.Проверить форму
+	//3.Делает запрос на сервер и возвращает ответ серверу
+	let _ajaxForm = function (form, url) {
+
+
+		//if(!valid) return false;
+		let data = form.serialize();
+		let result = $.ajax({
+			url: url,
+			type: 'POST',
+			dateType: 'json',
+			data: data,
+		}).fail(function (ans) {
+			console.log('Проблемы в PHP');
+			form.find('.error-mes').text('На сервере произошла ошибка').show();
+		});
+		return result;
+	};
+
+	//Возвращаем объект
 	return {
 		init:init
-	}
-});
+	};
+})();
 myModule.init();
 
-/*let validation = (function () {
+let validation = (function () {
 
 	//Инициализирует модуль
 	let init = function () {
@@ -69,6 +119,20 @@ myModule.init();
 
 	//Прослушивает события
 	let _setUpListners = function () {
+		$('form').on('keydown', '.has-error', _removeError);
+		$('form').on('reset', _clearForm);
+	};
+
+	//Добавляет класс для незаполненных полей
+	let _removeError = function () {
+		$(this).removeClass('has-error');
+	};
+
+	//Очищает форму
+	let _clearForm = function () {
+		let form = $(this);
+		form.find('.contacts-input, .contacts-textarea').trigger('hideTooltip');
+		form.find('.has-error').removeClass('.has-error');
 	};
 
 	//Создает тултипы
@@ -110,24 +174,31 @@ myModule.init();
 
 	//Универсальная функция
 	let validateForm = function (form) {
-		console.log('Привет! Я в модуле валидации, проверяю форму');
+
 		let elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
 			valid = true;
 
 		//Пройдемся по всем элементам формы
-		$.each(elements, function (index, val) {
-			console.log(index);
-			console.log(val);
-		})
+		$.each(elements, function (index, _val) {
+			let element = $(_val),
+					val = element.val(),
+					pos = element.attr('qtip-position');
+			if(val.length === 0){
+				element.addClass('has-error');
+				_cteatQtip(element, pos);
+				valid = false;
+			}
+		});
+		return valid;
 	};
 
 	//Возвращает объект(публичные методы)
 	return {
 		init:init,
 		validateForm: validateForm
-	}
-});
-validation.init();*/
+	};
+})();
+validation.init();
 
 let contactMe = (function () {
 	let init = function () {
@@ -159,6 +230,6 @@ let contactMe = (function () {
 	//Возвращает объект(публичные методы)
 	return {
 		init:init
-	}
-});
+	};
+})();
 contactMe.init();

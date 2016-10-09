@@ -94,6 +94,8 @@
     "gulp-zip": "^3.0.0",
     "gulp.spritesmith-multi": "^2.2.0",
     "happypack": "^2.1.1",
+    "imports": "^1.0.0",
+    "imports-loader": "^0.6.5",
     "jade-get-data": "^1.0.0",
     "jade-injected": "^1.0.2",
     "jquery": "^2.1.4",
@@ -123,6 +125,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-flatten": "^0.3.1",
     "gulp-replace": "^0.5.4",
-    "jquery": "^2.2.4"
+    "jquery": "^2.2.4",
+    "qtip2": "^3.0.3"
   }
 }

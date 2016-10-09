@@ -62,6 +62,9 @@
 					<li class="social-icon">
 						<a href="https://github.com/NastasiaIva?tab=repositories" target="_blank" class="social-icon__inner social-icon__github"></a>
 					</li>
+					<li class="social-icon">
+						<a href="https://www.instagram.com/igosheva/" target="_blank" class="social-icon__inner social-icon__instagram"></a>
+					</li>
 				</ul>
 				<ul id="header-menu" class="header-menu">
 					<li class="header-menu__item"></li>
@@ -82,10 +85,13 @@
 					<li class="social-icon">
 						<a href="https://github.com/NastasiaIva?tab=repositories" target="_blank" class="social-icon__inner social-icon__github"></a>
 					</li>
+					<li class="social-icon">
+						<a href="https://www.instagram.com/igosheva/" target="_blank" class="social-icon__inner social-icon__instagram"></a>
+					</li>
 				</ul>
 				<aside class="sidebar">
-					<nav class="sidebar__navigation">
-						<ul id="content-menu" class="navigation-menu">
+					<nav id="content-menu" class="sidebar__navigation">
+						<ul class="navigation-menu">
 							<li data-class="about" class="navigation-menu__item js-menu-item active">
 								<a class="item-link js-item-link">
 									<span class="item-link__inner">Обо мне</span>
@@ -157,13 +163,18 @@
 											<li class="skills__item">html5</li>
 											<li class="skills__item">css3</li>
 											<li class="skills__item">jquery</li>
-											<li class="skills__item">jade</li>
-											<li class="skills__item">styl</li>
+											<li class="skills__item">jade(pug)</li>
+											<li class="skills__item">stylus</li>
 											<li class="skills__item">sass</li>
 											<li class="skills__item">less</li>
 											<li class="skills__item">gulp</li>
+											<li class="skills__item">Project Template(CSSSR)</li>
 											<li class="skills__item">git</li>
+											<li class="skills__item">Bootstrap</li>
+											<li class="skills__item">Semantic-ui</li>
 											<li class="skills__item">PixelPerfect</li>
+											<li class="skills__item">БЭМ/RSCSS</li>
+											<li class="skills__item">Media Queries</li>
 										</ul>
 									</li>
 								</ul>
@@ -204,6 +215,40 @@
 							</ul>
 						</div>
 					</div>
+					<div class="main-info__block">
+						<h1 class="info-title">Личные качества</h1>
+						<div class="content-info">
+							<ul class="experience-list lever-list">
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Высокая степень ответственности,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Аналитический склад ума,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Здоровый перфекционизм,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Обучаемость,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Работоспособность,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Целеустремлённость,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Умение работать в команде,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Коммуникабельность,</div>
+								</li>
+								<li class="experience-list__item experience-list__checkmark">
+									<div class="experience-title">Деловая этика.</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div class="main-info js-main-info portfolio-content main-info__works">
 					<div class="main-info__block">
@@ -225,8 +270,13 @@
 									<p class="portfolio-item__preview">Мое портфолио</p>
 								</li>
 								<li class="portfolio-item">
-									<a class="portfolio-item__image portfolio-item__new-project js-show-project"></a>
+									<a href="https://nastasiaiva.github.io/Animation-cat/animation-cat.html" target="_blank" class="portfolio-item__image portfolio-item__cat">
+										<span class="image-name">Анимация "Кот"</span>
+									</a>
+									<a href="https://nastasiaiva.github.io/Animation-cat/animation-cat.html" target="_blank" class="portfolio-item__link">https://nastasiaiva.github.io/Animation-cat/animation-cat.html</a>
+									<p class="portfolio-item__preview">Анимация "Кот"</p>
 								</li>
+								<!--+b.LI.portfolio-item+e.A.image.__new-project.js-show-project-->
 							</ul>
 						</div>
 					</div>
@@ -256,8 +306,13 @@
 									<p class="portfolio-item__preview">Официальный сайт компании Bkfon</p>
 								</li>
 								<li class="portfolio-item">
-									<a class="portfolio-item__image portfolio-item__new-project js-show-project"></a>
+									<a href="https://www.bestar.kz/avia/" target="_blank" class="portfolio-item__image portfolio-item__bestar">
+										<span class="image-name">beSTAR</span>
+									</a>
+									<a href="https://www.bestar.kz/avia/" target="_blank" class="portfolio-item__link">https://www.bestar.kz/avia/</a>
+									<p class="portfolio-item__preview">Официальный сайт компании beSTAR</p>
 								</li>
+								<!--+b.LI.portfolio-item+e.A.image.__new-project.js-show-project-->
 							</ul>
 						</div>
 					</div>
@@ -269,28 +324,32 @@
 					<div class="main-info__block">
 						<div class="content-info">
 							<form id="contact-me" method="post" action="" class="contacts-form">
+								<div class="success-mes"></div>
+								<div class="error-mes"></div>
 								<fieldset class="contacts-form__item">
-									<input name="name" type="text" placeholder="Как к вам обращаться" required="required" class="contacts-input" />
+									<input name="name" type="text" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя" qtip-position="left"
+										class="contacts-input" />
 									<label class="contacts-label">Имя</label>
 								</fieldset>
 								<fieldset class="contacts-form__item">
-									<input name="email" type="text" placeholder="Куда мне писать" required="required" class="contacts-input" />
+									<input name="email" type="text" placeholder="Куда мне писать" qtip-content="Вы не ввели e-mail" qtip-position="right"
+										class="contacts-input" />
 									<label class="contacts-label">Email</label>
 								</fieldset>
 								<fieldset class="contacts-form__item contacts-form__textarea">
-									<textarea id="textarea" name="textarea" type="text" maxlength="500" placeholder="Опишите кратко суть проекта" required="required"
+									<textarea id="textarea" name="textarea" type="text" maxlength="500" placeholder="Опишите кратко суть проекта" qtip-content="Вы не описали суть проекта"
 										class="contacts-input contacts-textarea"></textarea>
 									<label class="contacts-label">Сообщение</label>
 									<div class="contacts-counter">
 										<span id="counter"></span>/500</div>
 								</fieldset>
 								<fieldset class="contacts-form__item">
-									<button class="contacts-button disabled-button">
+									<button type="reset" class="contacts-button disabled-button">
 										<span class="contacts-button__text">Очистить</span>
 									</button>
 								</fieldset>
 								<fieldset class="contacts-form__item">
-									<button class="contacts-button">
+									<button type="submit" class="contacts-button">
 										<span class="contacts-button__text">Отправить</span>
 									</button>
 								</fieldset>
@@ -328,7 +387,7 @@
 		<footer class="footer">
 			<div class="footer__wrapper">
 				<a class="castle-authorization js-show-authorization"></a>
-				<span class="footer-content">© 2016. Это сайт Игошевой Анастасии. Пожалуйста, не копируйте и не воруйте его</span>
+				<span class="footer-content">© 2016, Игошева Анастасия</span>
 			</div>
 		</footer>
 		<div class="popup js-authorization-popup">
@@ -349,7 +408,7 @@
 						/>
 					</fieldset>
 					<fieldset class="contacts-form__item authorization-item">
-						<button class="contacts-button">
+						<button class="contacts-button js-button-authorization">
 							<span class="contacts-button__text">Отправить</span>
 						</button>
 					</fieldset>
@@ -363,7 +422,7 @@
 				<div class="project-header">
 					<div class="project-header__title">Добавление проекта</div>
 				</div>
-				<form method="post" action="" class="contacts-form project-form">
+				<form method="post" action="" id="addproject" class="contacts-form project-form">
 					<fieldset class="contacts-form__item project-item">
 						<label class="contacts-label">Название проекта</label>
 						<input name="name" type="text" placeholder="Введите название" required="required" class="contacts-input"
@@ -371,8 +430,9 @@
 					</fieldset>
 					<fieldset class="contacts-form__item project-item">
 						<label class="contacts-label">Картинка проекта</label>
-						<input name="picture" type="text" placeholder="Загрузите изображение" required="required" class="contacts-input"
+						<input name="picture" type="file" placeholder="Загрузите изображение" required="required" class="contacts-input picture-input"
 						/>
+						<i class="picture-icon"></i>
 					</fieldset>
 					<fieldset class="contacts-form__item project-item">
 						<label class="contacts-label">URL проекта</label>
@@ -387,7 +447,7 @@
 							<span id="commentCounter"></span>/200</div>
 					</fieldset>
 					<fieldset class="contacts-form__item project-item">
-						<button class="contacts-button">
+						<button type="submit" class="contacts-button">
 							<span class="contacts-button__text">Добавить</span>
 						</button>
 					</fieldset>

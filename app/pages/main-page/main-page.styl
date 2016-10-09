@@ -64,9 +64,9 @@
 		display inline-block
 		border-radius 5px
 		overflow hidden
-		background radial-gradient(circle farthest-corner at 100px 50px, #fff, #CAE4D8)
+		background radial-gradient(circle farthest-corner at 100px 50px, #fff, #dff7ec)
 		margin-bottom 25px
-		box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
+		box-shadow 1px 3px 5px rgba(0, 0, 0, .3), -1px -1px 5px rgba(0, 0, 0, .3)
 		@media only screen and (max-width: 1024px)
 			width 49%
 			margin-right 5%
@@ -87,34 +87,7 @@
 			width 100%
 			text-align center
 		.navigation-menu
-			&:before
-				content none
-				@media only screen and (max-width: 768px)
-					content ''
-					position absolute
-					right 26px
-					top -24px
-					border 12px solid transparent
-					border-bottom 12px solid #3ba8c0
-				@media only screen and (max-width: 480px)
-					content none
-			&__item
-				cursor pointer
-				display inline-block
-				line-height 73px
-				padding-left 10px
-				padding-right 10px
-				position relative
-				width 100%
-				@media only screen and (max-width: 480px)
-					line-height 41px
-				&.active
-					background-color #3ba8c0
-					cursor default
-					.item-link
-						color #fff
-					&:hover .item-link
-						color #fff
+			z-index 111
 	&__address
 		margin-bottom 25px
 		box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
@@ -133,41 +106,73 @@
 				display flex
 			@media only screen and (max-width: 640px)
 				flex-direction column
-			&__item
-				cursor pointer
-				display inline-block
-				line-height 40px
-				padding-left 20px
-				padding-right 10px
-				width 100%
-				@media only screen and (max-width: 768px)
-					&:after
-						content none
-				@media only screen and (max-width: 640px)
-					text-align center
-					padding-left 10px
-					&:after
-						content ''
-				&:last-child
-					&:after
-						content none
-			&__main-item
-				background-color #3ba8c0
+/*---Styles elements for navigation-menu----*/
+.navigation-menu
+	&:before
+		content none
+		@media only screen and (max-width: 768px)
+			content ''
+			position absolute
+			right 26px
+			top -24px
+			border 12px solid transparent
+			border-bottom 12px solid #3ba8c0
+		@media only screen and (max-width: 480px)
+			content none
+	&__item
+		cursor pointer
+		display inline-block
+		line-height 73px
+		padding-left 10px
+		padding-right 10px
+		position relative
+		width 100%
+		@media only screen and (max-width: 480px)
+			line-height 41px
+		&.active
+			background-color #3ba8c0
+			cursor default
+			.item-link
 				color #fff
-				@media only screen and (max-width: 768px)
-					display none
-			&__mail-item
-				background-color #41b9d4
-				.address-link__inner:before
-					background url('../images/mail.png') no-repeat center
-			&__phone-item
-				background-color #48cbe8
-				.address-link__inner:before
-					background url('../images/phone.png') no-repeat center
-			&__skype-item
-				background-color #51daf8
-				.address-link__inner:before
-					background url('../images/skype.png') no-repeat center
+			&:hover .item-link
+				color #fff
+/*---Styles elements for address-list----*/
+.address-list
+	&__item
+		cursor pointer
+		display inline-block
+		line-height 40px
+		padding-left 20px
+		padding-right 10px
+		width 100%
+		@media only screen and (max-width: 768px)
+			&:after
+				content none
+		@media only screen and (max-width: 640px)
+			text-align center
+			padding-left 10px
+			&:after
+				content ''
+		&:last-child
+			&:after
+				content none
+	&__main-item
+		background-color #3ba8c0
+		color #fff
+		@media only screen and (max-width: 768px)
+			display none
+	&__mail-item
+		background-color #41b9d4
+		.address-link__inner:before
+			background url('../images/mail.png') no-repeat center
+	&__phone-item
+		background-color #48cbe8
+		.address-link__inner:before
+			background url('../images/phone.png') no-repeat center
+	&__skype-item
+		background-color #51daf8
+		.address-link__inner:before
+			background url('../images/skype.png') no-repeat center
 /*---Styles elements for items of content-menu----*/
 .navigation-menu__item
 	&:after
@@ -249,12 +254,12 @@
 		display none
 		&__block
 			/*background-color #eff3f7*/
-			background radial-gradient(circle farthest-corner at 100px 50px, #fff, #CAE4D8)
+			background radial-gradient(circle farthest-corner at 100px 50px, #fff, #dff7ec)
 			border-radius 5px
 			margin-bottom 25px
 			padding 25px
 			width 100%
-			box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
+			box-shadow 1px 3px 5px rgba(0, 0, 0, .3), -1px -1px 5px rgba(0, 0, 0, .3)
 			overflow hidden
 			@media only screen and (max-width: 480px)
 				padding 15px
@@ -262,7 +267,7 @@
 				margin-bottom 0
 		.contects-header
 			background-color #48cbe8
-			box-shadow 3px 3px 25px rgba(0, 0, 0, .3)
+			box-shadow 1px 3px 5px rgba(0, 0, 0, .3), -1px -1px 5px rgba(0, 0, 0, .3)
 			line-height 118px
 			width 100%
 			border-bottom 17px solid #67dffa
@@ -358,6 +363,9 @@
 				background url('../images/education.png') no-repeat center
 			&__courses:before
 				background url('../images/courses.png') no-repeat center
+			&__checkmark:before
+				background url('../images/galochka.png') no-repeat center
+				background-size contain
 		&__portfolio-list
 			display flex
 			flex-wrap wrap
@@ -399,6 +407,11 @@
 			flex-wrap wrap
 			justify-content space-between
 			width 100%
+		.lever-list
+			.experience-list__item
+				padding-bottom 10px
+			.experience-title
+				line-height 35px
 /*---Styles elements for block of info-item----*/
 .info-item
 	&__important
@@ -483,6 +496,7 @@
 				background rgba(1, 108, 164, .75)
 			.image-name
 				display inline-block
+				animation image-name 3s alternate infinite
 	&__fiatogroup
 		background url('../images/fiatogroup.png') no-repeat center
 		background-size cover
@@ -491,6 +505,9 @@
 		background-size cover
 	&__bkfon
 		background url('../images/bkfon.png') no-repeat center
+		background-size cover
+	&__bestar
+		background url('../images/beStar.png') no-repeat center
 		background-size cover
 	&__jwood
 		background url('../images/jwood.png') no-repeat center
@@ -529,6 +546,9 @@
 			font-size 16px
 /*---Styles elements for items of contacts-form----*/
 .contacts-form
+	.success-mes, .error-mes
+		display block
+		width 100%
 	&__item
 		width 45%
 		margin-bottom 15px
@@ -564,6 +584,9 @@
 				font-family 'DecimaNovaPro', sans-serif
 			&:focus::-webkit-input-placeholder
 				opacity 0
+		.has-error
+			background-color rgba(249, 126, 118, .33)
+			border 1px solid #f97e76
 		.contacts-input:valid + .contacts-label
 			opacity 1
 			top -5px
@@ -878,3 +901,16 @@
 		transform translatey(0px) translatex(0px)
 	70%
 		transform translatey(-5px) translatex(3px)
+@keyframes image-name
+	0%
+		opacity 0
+		transform translatey(-15px)
+	20%
+		opacity .8
+	100%
+		opacity 1
+		transform translatey(0)
+.qtip-default
+	border none
+	color #fff
+	background-color #f97e76
