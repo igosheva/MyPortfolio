@@ -2,9 +2,8 @@
 .header
 	position relative
 	width 100%
+	background radial-gradient(circle farthest-corner at 100px 50px, #fff, #dff7ec)
 	&:after
-		/*background url('../images/stick.png') no-repeat 0 0
-		background-size cover*/
 		background-color #1c667a
 		background-image linear-gradient(to right, rgba(28, 102, 122, .9) 0, rgba(246, 250, 254, .9) 0, rgba(216, 216, 216, .9) 0, rgba(242, 246, 250, .9) 0, rgba(28, 102, 122, .9) 48%, rgba(242, 246, 250, .9) 100%)
 		bottom 0
@@ -19,8 +18,8 @@
 			background-size contain
 	&__wrapper
 		display flex
-		height 119px
-		line-height 119px
+		height 100px
+		line-height 100px
 		margin-left auto
 		margin-right auto
 		max-width 1280px
@@ -35,6 +34,7 @@
 		.header-title
 			display inline-block
 			vertical-align middle
+			position relative
 			@media only screen and (max-width: 768px)
 				width 50%
 			@media only screen and (max-width: 480px)
