@@ -1,7 +1,6 @@
 {
-  "name": "csssr-project-template",
-  "version": "0.26.0",
-  "description": "A template for a quick start.",
+  "name": "portfolio-igosheva",
+  "version": "0.1.0",
   "keywords": [
     "csssr-project-template",
     "cpt",
@@ -36,18 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh@github.com:CSSSR/csssr-project-template.git"
+    "url": "https://github.com/igosheva/MyPortfolio.git"
   },
-  "author": "Felix Exter <felixexter@ya.ru> (https://github.com/felixexter)",
-  "contributors": [
-    "Aleksandr Petrov <dzhiriki@gmail.com> (https://github.com/dzhiriki)",
-    "Maxim Samoilov <nitive@icloud.com> (https://github.com/nitive)"
-  ],
-  "bugs": {
-    "url": "https://github.com/CSSSR/csssr-project-template/issues/",
-    "email": "cpt@csssr.com"
-  },
-  "homepage": "https://github.com/CSSSR/csssr-project-template/",
+  "homepage": "https://igosheva.github.io/MyPortfolio/",
   "engines": {
     "node": ">=4.0.0",
     "npm": ">=2.0.0"

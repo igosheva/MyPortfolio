@@ -1,6 +1,6 @@
 /*---Styles for content of main-page----*/
 .main-content
-	background url('../images/bk.jpg') repeat 0 0
+	background url('../images/background.png') repeat 0 0
 	background-size cover
 	display table-row
 	font-size 18px
@@ -77,8 +77,8 @@
 			width 238px
 			margin-right 0
 			position absolute
-			top -26px
-			right -26px
+			top -15px
+			right -15px
 			z-index 11
 		@media only screen and (max-width: 480px)
 			left 0
@@ -104,6 +104,7 @@
 			width 100%
 			@media only screen and (max-width: 768px)
 				display flex
+				flex-wrap wrap
 			@media only screen and (max-width: 640px)
 				flex-direction column
 /*---Styles elements for navigation-menu----*/
@@ -146,11 +147,12 @@
 		padding-right 10px
 		width 100%
 		@media only screen and (max-width: 768px)
+			text-align center
 			&:after
 				content none
 		@media only screen and (max-width: 640px)
-			text-align center
 			padding-left 10px
+			width 100%
 			&:after
 				content ''
 		&:last-child
@@ -497,6 +499,12 @@
 			.image-name
 				display inline-block
 				animation image-name 3s alternate infinite
+	&__gelion
+		background url('../images/gelion.png') no-repeat center
+		background-size cover
+	&__doors
+		background url('../images/doors.png') no-repeat center
+		background-size cover
 	&__fiatogroup
 		background url('../images/fiatogroup.png') no-repeat center
 		background-size cover
@@ -626,7 +634,7 @@
 			@media only screen and (max-width: 480px)
 				width 100%
 		&:last-child
-			text-align right
+			text-align center
 	&__textarea
 		width 100%
 		.contacts-textarea

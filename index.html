@@ -21,17 +21,15 @@
 		<meta name="msapplication-tooltip" content="">
 		<link href="assets/styles/app.min.css" rel="stylesheet">
 		<title>Nastasia Igosheva</title>
-		<meta name="description" content="">
-		<meta name="keywords" content="">
+		<meta name="description" content="Portfolio HTML-coder Igosheva Anastasia">
+		<meta name="keywords" content="portfolio, HTML-coder, CSS-coder, resume, Igosheva Anastasia">
 	</head>
 
 	<body>
 		<header class="header">
 			<div class="header__wrapper">
-				<div class="header-title">
-					<a href="https://nastasiaiva.github.io/Resume/main-page.html" class="header-title__link"></a>
-				</div>
-				<ul class="header-icons">
+				<!--+b.header__title+b.A.header__title-link(href='https://nastasiaiva.github.io/Resume/main-page.html')-->
+				<ul class="header__icons">
 					<li class="social-icon">
 						<a href="https://vk.com/justanasteziya" target="_blank" class="social-icon__inner social-icon__vk"></a>
 					</li>
@@ -45,29 +43,15 @@
 						<a href="https://www.instagram.com/igosheva/" target="_blank" class="social-icon__inner social-icon__instagram"></a>
 					</li>
 				</ul>
-				<ul id="header-menu" class="header-menu">
-					<li class="header-menu__item"></li>
-					<li class="header-menu__item"></li>
-					<li class="header-menu__item"></li>
+				<ul id="header-menu" class="header__menu">
+					<li class="header__menu-item"></li>
+					<li class="header__menu-item"></li>
+					<li class="header__menu-item"></li>
 				</ul>
 			</div>
 		</header>
 		<div class="main-content clearfix">
 			<div class="main-content__wrapper">
-				<ul class="content-icons header-icons">
-					<li class="social-icon">
-						<a href="https://vk.com/justanasteziya" target="_blank" class="social-icon__inner social-icon__vk"></a>
-					</li>
-					<li class="social-icon">
-						<a href="https://www.facebook.com/just.anasteziya" target="_blank" class="social-icon__inner social-icon__fb"></a>
-					</li>
-					<li class="social-icon">
-						<a href="https://github.com/NastasiaIva?tab=repositories" target="_blank" class="social-icon__inner social-icon__github"></a>
-					</li>
-					<li class="social-icon">
-						<a href="https://www.instagram.com/igosheva/" target="_blank" class="social-icon__inner social-icon__instagram"></a>
-					</li>
-				</ul>
 				<aside class="sidebar">
 					<nav id="content-menu" class="sidebar__navigation">
 						<ul class="navigation-menu">
@@ -78,12 +62,7 @@
 							</li>
 							<li data-class="works" class="navigation-menu__item js-menu-item">
 								<a class="item-link js-item-link">
-									<span class="item-link__inner">Мои работы</span>
-								</a>
-							</li>
-							<li data-class="contacts" class="navigation-menu__item js-menu-item">
-								<a class="item-link js-item-link">
-									<span class="item-link__inner">Связаться со мной</span>
+									<span class="item-link__inner">Портфолио</span>
 								</a>
 							</li>
 						</ul>
@@ -97,7 +76,7 @@
 								</a>
 							</li>
 							<li class="address-list__item address-list__phone-item">
-								<a href="tel: +7(952)183-86-94" class="address-link">
+								<a href="tel: +7(911)914-72-47" class="address-link">
 									<span class="address-link__inner">+7-911-914-72-47</span>
 								</a>
 							</li>
@@ -111,7 +90,7 @@
 				</aside>
 				<div id="content-page" class="content-page">
 					<div class="main-info active js-main-info main-info__about">
-						<div class="main-info__block">
+						<section class="main-info__block">
 							<h1 class="info-title">Основная информация</h1>
 							<div class="content-info">
 								<div class="content-info__avatarka"></div>
@@ -127,10 +106,6 @@
 									<li class="info-item clearfix">
 										<span class="info-item__important">Мой город:</span>
 										<span class="info-item__value">Санкт-Петербург, Россия</span>
-									</li>
-									<li class="info-item clearfix">
-										<span class="info-item__important">Гражданство:</span>
-										<span class="info-item__value">Россия</span>
 									</li>
 									<li class="info-item clearfix">
 										<span class="info-item__important">Моя специализация:</span>
@@ -153,8 +128,8 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-						<div class="main-info__block">
+						</section>
+						<section class="main-info__block">
 							<h1 class="info-title">Опыт работы</h1>
 							<div class="content-info">
 								<ul class="experience-list">
@@ -168,8 +143,8 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-						<div class="main-info__block">
+						</section>
+						<section class="main-info__block">
 							<h1 class="info-title">Образование</h1>
 							<div class="content-info">
 								<ul class="experience-list">
@@ -183,46 +158,12 @@
 								<div class="experience-time">Январь 2016 — Ферваль 2016</div>
 							</li>
 							</ul>
-						</div>
 					</div>
+					</section>
 				</div>
 				<div class="main-info js-main-info portfolio-content main-info__works">
-					<div class="main-info__block">
-						<h2 class="info-title">Мои работы</h2>
-						<div class="content-info">
-							<ul class="content-info__portfolio-list">
-								<!--+b.LI.portfolio-item+e.A.image.__beerzha(href='https://nastasiaiva.github.io/BeerZha/main-page.html', target="_blank")
-	+b.SPAN.image-name BeerZha
-+e.A.link(href='https://nastasiaiva.github.io/BeerZha/main-page.html', target="_blank") https://nastasiaiva.github.io/BeerZha/main-page.html
-+e.P.preview Лендинг ресторана BeerZha-->
-								<!--+b.LI.portfolio-item+e.A.image.__top3(href='https://nastasiaiva.github.io/top3dshop/main-page.html', target="_blank")
-	+b.SPAN.image-name Лендинг компании Top3dShop
-+e.A.link(href='https://nastasiaiva.github.io/top3dshop/main-page.html', target="_blank") https://nastasiaiva.github.io/top3dshop/main-page.html
-+e.P.preview Top3dShop-->
-								<li class="portfolio-item">
-									<a href="https://nastasiaiva.github.io/AVAILABILITY/main-page.html" target="_blank" class="portfolio-item__image portfolio-item__veeam">
-										<span class="image-name">Лендинг компании VEEAM</span>
-									</a>
-									<a href="https://nastasiaiva.github.io/AVAILABILITY/main-page.html" target="_blank" class="portfolio-item__link">Лендинг компании VEEAM</a>
-								</li>
-								<li class="portfolio-item">
-									<a href="https://nastasiaiva.github.io/jwood/index.html" target="_blank" class="portfolio-item__image portfolio-item__jwood">
-										<span class="image-name">JWOODPhotography</span>
-									</a>
-									<a href="https://nastasiaiva.github.io/jwood/index.html" target="_blank" class="portfolio-item__link">Портфолио фотографа Jason Wood</a>
-								</li>
-								<li class="portfolio-item">
-									<a href="https://nastasiaiva.github.io/Animation-cat/animation-cat.html" target="_blank" class="portfolio-item__image portfolio-item__cat">
-										<span class="image-name">Анимация "Кот"</span>
-									</a>
-									<a href="https://nastasiaiva.github.io/Animation-cat/animation-cat.html" target="_blank" class="portfolio-item__link">Анимация "Кот"</a>
-								</li>
-								<!--+b.LI.portfolio-item+e.A.image.__new-project.js-show-project-->
-							</ul>
-						</div>
-					</div>
-					<div class="main-info__block">
-						<h2 class="info-title">Коммерческие проекты</h2>
+					<section class="main-info__block">
+						<h2 class="info-title">Личные проекты</h2>
 						<div class="content-info">
 							<ul class="content-info__portfolio-list">
 								<li class="portfolio-item">
@@ -231,6 +172,37 @@
 									</a>
 									<a href="http://fiatogroup.ru/" target="_blank" class="portfolio-item__link">Сайт аренды коммерческой недвижимости</a>
 								</li>
+								<li class="portfolio-item">
+									<a href="http://ptk-gelion.ru/" target="_blank" class="portfolio-item__image portfolio-item__gelion">
+										<span class="image-name">Gelion</span>
+									</a>
+									<a href="http://ptk-gelion.ru/" target="_blank" class="portfolio-item__link">Landing page компании Gelion</a>
+								</li>
+								<li class="portfolio-item">
+									<a href="https://igosheva.github.io/doors_new/" target="_blank" class="portfolio-item__image portfolio-item__doors">
+										<span class="image-name">Двери</span>
+									</a>
+									<a href="https://igosheva.github.io/doors_new/" target="_blank" class="portfolio-item__link">Landing page компании "Двери"</a>
+								</li>
+								<li class="portfolio-item">
+									<a href="https://igosheva.github.io/BeerZha/" target="_blank" class="portfolio-item__image portfolio-item__beerzha">
+										<span class="image-name">BeerZha</span>
+									</a>
+									<a href="https://igosheva.github.io/BeerZha/" target="_blank" class="portfolio-item__link">Стартовая страница сайта ресторана 'BeerZha'</a>
+								</li>
+								<li class="portfolio-item">
+									<a href="https://igosheva.github.io/JWood/" target="_blank" class="portfolio-item__image portfolio-item__jwood">
+										<span class="image-name">JWOODPhotography</span>
+									</a>
+									<a href="https://igosheva.github.io/JWood/" target="_blank" class="portfolio-item__link">Портфолио фотографа Jason Wood</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="main-info__block">
+						<h2 class="info-title">Командные проекты</h2>
+						<div class="content-info">
+							<ul class="content-info__portfolio-list">
 								<li class="portfolio-item">
 									<a href="http://smsfinance.fullstack-development.com/review-1.html" target="_blank" class="portfolio-item__image portfolio-item__smsfinance">
 										<span class="image-name">Smsfinance</span>
@@ -252,47 +224,7 @@
 								<!--+b.LI.portfolio-item+e.A.image.__new-project.js-show-project-->
 							</ul>
 						</div>
-					</div>
-				</div>
-				<div class="main-info js-main-info main-info__contacts">
-					<div class="contects-header">
-						<h2 class="contects-header__title contacts-title">У вас есть интересный проект? Я буду рада в нем поучаствовать!</h2>
-					</div>
-					<div class="main-info__block">
-						<div class="content-info">
-							<form id="contact-me" method="post" action="" class="contacts-form">
-								<div class="success-mes"></div>
-								<div class="error-mes"></div>
-								<fieldset class="contacts-form__item">
-									<input name="name" type="text" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя" qtip-position="left"
-										class="contacts-input" />
-									<label class="contacts-label">Имя</label>
-								</fieldset>
-								<fieldset class="contacts-form__item">
-									<input name="email" type="text" placeholder="Куда мне писать" qtip-content="Вы не ввели e-mail" qtip-position="right"
-										class="contacts-input" />
-									<label class="contacts-label">Email</label>
-								</fieldset>
-								<fieldset class="contacts-form__item contacts-form__textarea">
-									<textarea id="textarea" name="textarea" type="text" maxlength="500" placeholder="Опишите кратко суть проекта" qtip-content="Вы не описали суть проекта"
-										class="contacts-input contacts-textarea"></textarea>
-									<label class="contacts-label">Сообщение</label>
-									<div class="contacts-counter">
-										<span id="counter"></span>/500</div>
-								</fieldset>
-								<fieldset class="contacts-form__item">
-									<button type="reset" class="contacts-button disabled-button">
-										<span class="contacts-button__text">Очистить</span>
-									</button>
-								</fieldset>
-								<fieldset class="contacts-form__item">
-									<button type="submit" class="contacts-button">
-										<span class="contacts-button__text">Отправить</span>
-									</button>
-								</fieldset>
-							</form>
-						</div>
-					</div>
+					</section>
 				</div>
 			</div>
 			<div class="cat">
@@ -323,28 +255,28 @@
 		</div>
 		<footer class="footer">
 			<div class="footer__wrapper">
-				<a class="castle-authorization js-show-authorization"></a>
-				<span class="footer-content">© 2016, Игошева Анастасия</span>
+				<a class="footer__link js-show-authorization"></a>
+				<span class="footer__content">© 2016, Игошева Анастасия</span>
 			</div>
 		</footer>
 		<div class="popup js-authorization-popup">
 			<a class="popup__wrapper js-close-authorization"></a>
-			<div class="popup__content popup__authorization-content">
+			<div class="popup__content authorization-content">
 				<button class="popup-close js-close-authorization"></button>
-				<div class="authorization-header">
-					<div class="authorization-header__title">Авторизируйтесь</div>
+				<div class="authorization-content__header">
+					<div class="authorization-content__title">Авторизируйтесь</div>
 				</div>
-				<form method="post" action="" class="contacts-form authorization-form">
-					<fieldset class="contacts-form__item authorization-item">
+				<form method="post" action="" class="contacts-form authorization-content__form">
+					<fieldset class="contacts-form__item authorization-content__item">
 						<label class="contacts-label">Логин</label>
 						<input name="login" type="text" placeholder="Логин" required="required" class="contacts-input" />
 					</fieldset>
-					<fieldset class="contacts-form__item authorization-item">
+					<fieldset class="contacts-form__item authorization-content__item">
 						<label class="contacts-label">Пароль</label>
 						<input name="password" type="password" placeholder="Пароль" required="required" class="contacts-input"
 						/>
 					</fieldset>
-					<fieldset class="contacts-form__item authorization-item">
+					<fieldset class="contacts-form__item authorization-content__item">
 						<button class="contacts-button js-button-authorization">
 							<span class="contacts-button__text">Отправить</span>
 						</button>
@@ -354,29 +286,29 @@
 		</div>
 		<div class="popup js-project-popup">
 			<a class="popup__wrapper js-close-project"></a>
-			<div class="popup__content popup__project-content">
+			<div class="popup__content project-content">
 				<button class="popup-close js-close-project"></button>
-				<div class="project-header">
-					<div class="project-header__title">Добавление проекта</div>
+				<div class="project-content__header">
+					<div class="project-content__project-content__title">Добавление проекта</div>
 				</div>
-				<form method="post" action="" id="addproject" class="contacts-form project-form">
-					<fieldset class="contacts-form__item project-item">
+				<form method="post" action="" id="addproject" class="contacts-form project-content__form">
+					<fieldset class="contacts-form__item project-content__item">
 						<label class="contacts-label">Название проекта</label>
 						<input name="name" type="text" placeholder="Введите название" required="required" class="contacts-input"
 						/>
 					</fieldset>
-					<fieldset class="contacts-form__item project-item">
+					<fieldset class="contacts-form__item project-content__item">
 						<label class="contacts-label">Картинка проекта</label>
 						<input name="picture" type="file" placeholder="Загрузите изображение" required="required" class="contacts-input picture-input"
 						/>
 						<i class="picture-icon"></i>
 					</fieldset>
-					<fieldset class="contacts-form__item project-item">
+					<fieldset class="contacts-form__item project-content__item">
 						<label class="contacts-label">URL проекта</label>
 						<input name="url" type="text" placeholder="Добавьте ссылку" required="required" class="contacts-input"
 						/>
 					</fieldset>
-					<fieldset class="contacts-form__item contacts-form__textarea project-item">
+					<fieldset class="contacts-form__item contacts-form__textarea project-content__item">
 						<label class="contacts-label">Описание</label>
 						<textarea id="commentTextarea" name="textarea" type="text" maxlength="200" placeholder="Пара слов о Вашем проекте"
 							required="required" class="contacts-input contacts-textarea"></textarea>
@@ -393,5 +325,4 @@
 		</div>
 	</body>
 	<script src="assets/scripts/app.min.js"></script>
-
 </html>

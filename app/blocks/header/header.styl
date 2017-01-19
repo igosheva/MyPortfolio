@@ -25,64 +25,62 @@
 		max-width 1280px
 		vertical-align middle
 		width 95%
-		justify-content space-between
+		justify-content flex-end
 		@media only screen and (max-width: 768px)
 			width 93%
-		@media only screen and (max-width: 480px)
 			height 55px
 			line-height 55px
-		.header-title
-			display inline-block
-			vertical-align middle
-			position relative
-			@media only screen and (max-width: 768px)
-				width 50%
-			@media only screen and (max-width: 480px)
-				width 80%
-			&__link
-				color #58697a
-				font-family 'felt_tip_womanregular', sans-serif
-				font-size 44px
-				font-weight 700
-				line-height 44px
-				text-transform uppercase
-				vertical-align middle
-				@media only screen and (max-width: 640px)
-					font-size 36px
-				@media only screen and (max-width: 480px)
-					font-size 28px
-				&:hover
-					color #3ba8c0
-		.header-icons
-			display flex
-			width auto
-			align-items center
-			min-width 200px
 			justify-content space-between
-			@media only screen and (max-width: 768px)
-				min-width 150px
-			@media only screen and (max-width: 480px)
-				display none
-		.header-menu
-			display none
-			@media only screen and (max-width: 768px)
-				display flex
-				flex-direction column
-				justify-content center
-				cursor pointer
-			&__item
-				width 25px
-				height 5px
-				background-color #58697a
-				margin-bottom 3px
-				border-radius 2px
-			&:hover, &:active, &:focus
-				.header-menu__item
-					background-color #3ba8c0
-			.menu-active
-				background-color #3ba8c0
+	/*&__title
+		display inline-block
+		vertical-align middle
+		position relative
+		@media only screen and (max-width: 768px)
+			width 50%
+		@media only screen and (max-width: 480px)
+			width 80%*/
+	/*&__title-link
+		color #58697a
+		font-family 'felt_tip_womanregular', sans-serif
+		font-size 44px
+		font-weight 700
+		line-height 44px
+		text-transform uppercase
+		vertical-align middle
+		@media only screen and (max-width: 640px)
+			font-size 36px
+		@media only screen and (max-width: 480px)
+			font-size 28px
+		&:hover
+			color #3ba8c0*/
+	&__icons
+		display flex
+		width auto
+		align-items center
+		min-width 200px
+		justify-content space-between
+		@media only screen and (max-width: 768px)
+			min-width 150px
+	&__menu
+		display none
+		@media only screen and (max-width: 768px)
+			display flex
+			flex-direction column
+			justify-content center
+			cursor pointer
+	&__menu-item
+		width 25px
+		height 5px
+		background-color #58697a
+		margin-bottom 3px
+		border-radius 2px
+	&:hover, &:active, &:focus
+		.header__menu-item
+			background-color #3ba8c0
+	.menu-active
+		background-color #3ba8c0
 /*---Styles for social icons----*/
-.header-icons
+.header__icons
 	.social-icon
 		display inline-block
 		float right
@@ -96,13 +94,6 @@
 			height 40px
 			width 40px
 		@media only screen and (max-width: 768px)
-			height 40px
-			width 40px
-			margin-left 15px
-			&:hover
-				height 36px
-				width 36px
-		@media only screen and (max-width: 640px)
 			height 34px
 			width 34px
 			margin-left 15px
@@ -110,12 +101,12 @@
 				height 32px
 				width 32px
 		@media only screen and (max-width: 480px)
-			height 44px
-			width 44px
-			margin-left 25px
+			height 30px
+			width 30px
+			margin-left 10px
 			&:hover
-				height 40px
-				width 40px
+				height 28px
+				width 28px
 		&:first-child
 			margin-left 0
 		&__inner

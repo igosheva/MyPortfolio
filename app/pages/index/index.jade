@@ -2,11 +2,13 @@ extends /common/templates/base.jade
 
 block head
 	- var pageTitle = 'Nastasia Igosheva';
+	- var pageDescription = 'Portfolio HTML-coder Igosheva Anastasia'
+	- var pageKeywords = 'portfolio, HTML-coder, CSS-coder, resume, Igosheva Anastasia'
 
 block content
 	+b.main-content.clearfix
 		+e.wrapper
-			+b.UL.content-icons.header-icons
+			//+b.UL.content-icons.header-icons
 				+b.LI.social-icon
 					+e.A.inner.__vk(href="https://vk.com/justanasteziya", target="_blank")
 				+b.LI.social-icon
@@ -23,8 +25,8 @@ block content
 								+e.SPAN.inner Обо мне
 						+e.LI.item.js-menu-item(data-class='works')
 							+b.A.item-link.js-item-link
-								+e.SPAN.inner Мои работы
-						+e.LI.item.js-menu-item(data-class='contacts')
+								+e.SPAN.inner Портфолио
+						//+e.LI.item.js-menu-item(data-class='contacts')
 							+b.A.item-link.js-item-link
 								+e.SPAN.inner Связаться со мной
 				+e.ADDRESS.address
@@ -34,14 +36,14 @@ block content
 							+b.A.address-link(href='mailto: just_anasteziya@mail.ru')
 								+e.SPAN.inner just_anasteziya@mail.ru
 						+e.LI.item.__phone-item
-							+b.A.address-link(href='tel: +7(952)183-86-94')
+							+b.A.address-link(href='tel: +7(911)914-72-47')
 								+e.SPAN.inner +7-911-914-72-47
 						+e.LI.item.__skype-item
 							+b.A.address-link(href='skype:anasteziya525')
 								+e.SPAN.inner anasteziya525
 			+b.content-page#content-page
 				+b.main-info.active.js-main-info.main-info__about
-					+e.block
+					+e.SECTION.block
 						+b.H1.info-title Основная информация
 						+b.content-info
 							+e.avatarka
@@ -55,7 +57,7 @@ block content
 								+b.LI.info-item.clearfix
 									+e.SPAN.important Мой город:
 									+e.SPAN.value Санкт-Петербург, Россия
-								+b.LI.info-item.clearfix
+								//+b.LI.info-item.clearfix
 									+e.SPAN.important Гражданство:
 									+e.SPAN.value Россия
 								+b.LI.info-item.clearfix
@@ -74,7 +76,7 @@ block content
 										+e.LI.item git
 										+e.LI.item bootstrap
 										+e.LI.item semantic-ui
-					+e.block
+					+e.SECTION.block
 						+b.H1.info-title Опыт работы
 						+b.content-info
 							+b.UL.experience-list
@@ -86,7 +88,7 @@ block content
 									+b.experience-title
 										|ООО "FullStack Development" - front-end разработчик
 									+b.experience-time Март 2016 — Ноябрь 2016
-					+e.block
+					+e.SECTION.block
 						+b.H1.info-title Образование
 						+b.content-info
 							+b.UL.experience-list
@@ -99,42 +101,44 @@ block content
 										|Курсы html-academy
 									+b.experience-time Январь 2016 — Ферваль 2016
 				+b.main-info.js-main-info.portfolio-content.main-info__works
-					+e.block
-						+b.H2.info-title Мои работы
-						+b.content-info
-							+e.UL.portfolio-list
-								//+b.LI.portfolio-item
-									+e.A.image.__beerzha(href='https://nastasiaiva.github.io/BeerZha/main-page.html', target="_blank")
-										+b.SPAN.image-name BeerZha
-									+e.A.link(href='https://nastasiaiva.github.io/BeerZha/main-page.html', target="_blank") https://nastasiaiva.github.io/BeerZha/main-page.html
-									+e.P.preview Лендинг ресторана BeerZha
-								//+b.LI.portfolio-item
-									+e.A.image.__top3(href='https://nastasiaiva.github.io/top3dshop/main-page.html', target="_blank")
-										+b.SPAN.image-name Лендинг компании Top3dShop
-									+e.A.link(href='https://nastasiaiva.github.io/top3dshop/main-page.html', target="_blank") https://nastasiaiva.github.io/top3dshop/main-page.html
-									+e.P.preview Top3dShop
-								+b.LI.portfolio-item
-									+e.A.image.__jwood(href='https://nastasiaiva.github.io/jwood/index.html', target="_blank")
-										+b.SPAN.image-name JWOODPhotography
-									+e.A.link(href='https://nastasiaiva.github.io/jwood/index.html#start', target="_blank") Портфолио фотографа Jason Wood
-								+b.LI.portfolio-item
-									+e.A.image.__veeam(href='https://nastasiaiva.github.io/AVAILABILITY/main-page.html', target="_blank")
-										+b.SPAN.image-name Лендинг компании VEEAM
-									+e.A.link(href='https://nastasiaiva.github.io/AVAILABILITY/main-page.html', target="_blank") Лендинг компании VEEAM
-								+b.LI.portfolio-item
-									+e.A.image.__cat(href='https://nastasiaiva.github.io/Animation-cat/animation-cat.html', target="_blank")
-										+b.SPAN.image-name Анимация "Кот"
-									+e.A.link(href='https://nastasiaiva.github.io/Animation-cat/animation-cat.html', target="_blank") Анимация "Кот"
-								//+b.LI.portfolio-item
-									+e.A.image.__new-project.js-show-project
-					+e.block
-						+b.H2.info-title Коммерческие проекты
+					+e.SECTION.block
+						+b.H2.info-title Личные проекты
 						+b.content-info
 							+e.UL.portfolio-list
 								+b.LI.portfolio-item
 									+e.A.image.__fiatogroup(href='http://fiatogroup.ru/', target="_blank")
 										+b.SPAN.image-name Fiatogroup
 									+e.A.link(href='http://fiatogroup.ru/', target="_blank") Сайт аренды коммерческой недвижимости
+								+b.LI.portfolio-item
+									+e.A.image.__gelion(href='http://ptk-gelion.ru/', target="_blank")
+										+b.SPAN.image-name Gelion
+									+e.A.link(href='http://ptk-gelion.ru/', target="_blank") Landing page компании Gelion
+								+b.LI.portfolio-item
+									+e.A.image.__doors(href='https://igosheva.github.io/doors_new/', target="_blank")
+										+b.SPAN.image-name Двери
+									+e.A.link(href='https://igosheva.github.io/doors_new/', target="_blank") Landing page компании "Двери"
+								+b.LI.portfolio-item
+									+e.A.image.__beerzha(href='https://igosheva.github.io/BeerZha/', target="_blank")
+										+b.SPAN.image-name BeerZha
+									+e.A.link(href='https://igosheva.github.io/BeerZha/', target="_blank") Стартовая страница сайта ресторана 'BeerZha'
+								+b.LI.portfolio-item
+									+e.A.image.__jwood(href='https://igosheva.github.io/JWood/', target="_blank")
+										+b.SPAN.image-name JWOODPhotography
+									+e.A.link(href='https://igosheva.github.io/JWood/', target="_blank") Портфолио фотографа Jason Wood
+								//+b.LI.portfolio-item
+									+e.A.image.__veeam(href='https://nastasiaiva.github.io/AVAILABILITY/main-page.html', target="_blank")
+										+b.SPAN.image-name Лендинг компании VEEAM
+									+e.A.link(href='https://nastasiaiva.github.io/AVAILABILITY/main-page.html', target="_blank") Лендинг компании VEEAM
+								//+b.LI.portfolio-item
+									+e.A.image.__cat(href='https://nastasiaiva.github.io/Animation-cat/animation-cat.html', target="_blank")
+										+b.SPAN.image-name Анимация "Кот"
+									+e.A.link(href='https://nastasiaiva.github.io/Animation-cat/animation-cat.html', target="_blank") Анимация "Кот"
+								//+b.LI.portfolio-item
+									+e.A.image.__new-project.js-show-project
+					+e.SECTION.block
+						+b.H2.info-title Командные проекты
+						+b.content-info
+							+e.UL.portfolio-list
 								+b.LI.portfolio-item
 									+e.A.image.__smsfinance(href='http://smsfinance.fullstack-development.com/review-1.html', target="_blank")
 										+b.SPAN.image-name Smsfinance
@@ -149,7 +153,7 @@ block content
 									+e.A.link(href='http://www.bestar.kz/hotelavia/', target="_blank") Редизайн сайта компании beSTAR
 								//+b.LI.portfolio-item
 									+e.A.image.__new-project.js-show-project
-				+b.main-info.js-main-info.main-info__contacts
+				//+b.main-info.js-main-info.main-info__contacts
 					+b.contects-header
 						+e.H2.title.contacts-title У вас есть интересный проект? Я буду рада в нем поучаствовать!
 					+e.block

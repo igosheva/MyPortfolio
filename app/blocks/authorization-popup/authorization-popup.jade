@@ -1,17 +1,17 @@
 mixin authorization-popup()
 	+b.popup.js-authorization-popup
 		+e.A.wrapper.js-close-authorization
-		+e.content.__authorization-content
+		+e.content.authorization-content
 			+b.BUTTON.popup-close.js-close-authorization
-			+b.authorization-header
-				+e.title Авторизируйтесь
-			+b.FORM.contacts-form.authorization-form(method='post', action='')
-				+e.FIELDSET.item.authorization-item
+			+b.authorization-content__header
+				+b.authorization-content__title Авторизируйтесь
+			+b.FORM.contacts-form.authorization-content__form(method='post', action='')
+				+e.FIELDSET.item.authorization-content__item
 					+b.LABEL.contacts-label Логин
 					+b.INPUT.contacts-input(name="login", type="text", placeholder="Логин", required)
-				+e.FIELDSET.item.authorization-item
+				+e.FIELDSET.item.authorization-content__item
 					+b.LABEL.contacts-label Пароль
 					+b.INPUT.contacts-input(name="password", type="password", placeholder="Пароль", required)
-				+e.FIELDSET.item.authorization-item
+				+e.FIELDSET.item.authorization-content__item
 					+b.BUTTON.contacts-button.js-button-authorization
 						+e.SPAN.text Отправить

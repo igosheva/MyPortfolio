@@ -1,22 +1,22 @@
 mixin project-popup()
 	+b.popup.js-project-popup
 		+e.A.wrapper.js-close-project
-		+e.content.__project-content
+		+e.content.project-content
 			+b.BUTTON.popup-close.js-close-project
-			+b.project-header
-				+e.title Добавление проекта
-			+b.FORM.contacts-form.project-form(method='post', action='')#addproject
-				+e.FIELDSET.item.project-item
+			+b.project-content__header
+				+e.project-content__title Добавление проекта
+			+b.FORM.contacts-form.project-content__form(method='post', action='')#addproject
+				+e.FIELDSET.item.project-content__item
 					+b.LABEL.contacts-label Название проекта
 					+b.INPUT.contacts-input(name="name", type="text", placeholder="Введите название", required)
-				+e.FIELDSET.item.project-item
+				+e.FIELDSET.item.project-content__item
 					+b.LABEL.contacts-label Картинка проекта
 					+b.INPUT.contacts-input.picture-input(name="picture", type="file", placeholder="Загрузите изображение", required)
 					+b.I.picture-icon
-				+e.FIELDSET.item.project-item
+				+e.FIELDSET.item.project-content__item
 					+b.LABEL.contacts-label URL проекта
 					+b.INPUT.contacts-input(name="url", type="text", placeholder="Добавьте ссылку", required)
-				+e.FIELDSET.item.__textarea.project-item
+				+e.FIELDSET.item.__textarea.project-content__item
 					+b.LABEL.contacts-label Описание
 					+b.TEXTAREA.contacts-input.contacts-textarea#commentTextarea(name="textarea", type="text", maxlength='200',  placeholder="Пара слов о Вашем проекте", required)
 					+b.contacts-counter

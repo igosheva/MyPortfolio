@@ -1,9 +1,9 @@
 mixin header()
 	+b.HEADER.header
 		+e.wrapper
-			+b.header-title
-				+e.A.link(href='https://nastasiaiva.github.io/Resume/main-page.html')
-			+b.UL.header-icons
+			//+b.header__title
+				+b.A.header__title-link(href='https://nastasiaiva.github.io/Resume/main-page.html')
+			+b.UL.header__icons
 				+b.LI.social-icon
 					+e.A.inner.__vk(href="https://vk.com/justanasteziya", target="_blank")
 				+b.LI.social-icon
@@ -12,7 +12,7 @@ mixin header()
 					+e.A.inner.__github(href="https://github.com/NastasiaIva?tab=repositories", target="_blank")
 				+b.LI.social-icon
 					+e.A.inner.__instagram(href="https://www.instagram.com/igosheva/", target="_blank")
-			+b.UL.header-menu#header-menu
-				+e.LI.item
-				+e.LI.item
-				+e.LI.item
+			+b.UL.header__menu#header-menu
+				+b.LI.header__menu-item
+				+b.LI.header__menu-item
+				+b.LI.header__menu-item
