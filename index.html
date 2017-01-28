@@ -16,7 +16,6 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<link sizes="16x16" href="assets/images/favicon.png" rel="icon" type="image/png">
-		<link rel="manifest" href="/manifest.json">
 		<meta name="application-name" content="">
 		<meta name="msapplication-tooltip" content="">
 		<link href="assets/styles/app.min.css" rel="stylesheet">
@@ -65,6 +64,11 @@
 									<span class="item-link__inner">Портфолио</span>
 								</a>
 							</li>
+							<li data-class="contacts" class="navigation-menu__item js-menu-item">
+								<a class="item-link js-item-link">
+									<span class="item-link__inner">Связаться со мной</span>
+								</a>
+							</li>
 						</ul>
 					</nav>
 					<address class="sidebar__address">
@@ -106,6 +110,10 @@
 									<li class="info-item clearfix">
 										<span class="info-item__important">Мой город:</span>
 										<span class="info-item__value">Санкт-Петербург, Россия</span>
+									</li>
+									<li class="info-item clearfix">
+										<span class="info-item__important">Гражданство:</span>
+										<span class="info-item__value">Россия</span>
 									</li>
 									<li class="info-item clearfix">
 										<span class="info-item__important">Моя специализация:</span>
@@ -167,16 +175,16 @@
 						<div class="content-info">
 							<ul class="content-info__portfolio-list">
 								<li class="portfolio-item">
-									<a href="http://fiatogroup.ru/" target="_blank" class="portfolio-item__image portfolio-item__fiatogroup">
-										<span class="image-name">Fiatogroup</span>
-									</a>
-									<a href="http://fiatogroup.ru/" target="_blank" class="portfolio-item__link">Сайт аренды коммерческой недвижимости</a>
-								</li>
-								<li class="portfolio-item">
 									<a href="http://ptk-gelion.ru/" target="_blank" class="portfolio-item__image portfolio-item__gelion">
 										<span class="image-name">Gelion</span>
 									</a>
 									<a href="http://ptk-gelion.ru/" target="_blank" class="portfolio-item__link">Landing page компании Gelion</a>
+								</li>
+								<li class="portfolio-item">
+									<a href="https://igosheva.github.io/BeerZha#main" target="_blank" class="portfolio-item__image portfolio-item__beerzha">
+										<span class="image-name">BeerZha</span>
+									</a>
+									<a href="https://igosheva.github.io/BeerZha#main" target="_blank" class="portfolio-item__link">Стартовая страница сайта ресторана 'BeerZha'</a>
 								</li>
 								<li class="portfolio-item">
 									<a href="https://igosheva.github.io/doors_new/" target="_blank" class="portfolio-item__image portfolio-item__doors">
@@ -185,17 +193,24 @@
 									<a href="https://igosheva.github.io/doors_new/" target="_blank" class="portfolio-item__link">Landing page компании "Двери"</a>
 								</li>
 								<li class="portfolio-item">
-									<a href="https://igosheva.github.io/BeerZha/" target="_blank" class="portfolio-item__image portfolio-item__beerzha">
-										<span class="image-name">BeerZha</span>
-									</a>
-									<a href="https://igosheva.github.io/BeerZha/" target="_blank" class="portfolio-item__link">Стартовая страница сайта ресторана 'BeerZha'</a>
-								</li>
-								<li class="portfolio-item">
-									<a href="https://igosheva.github.io/JWood/" target="_blank" class="portfolio-item__image portfolio-item__jwood">
+									<a href="https://igosheva.github.io/JWood#start" target="_blank" class="portfolio-item__image portfolio-item__jwood">
 										<span class="image-name">JWOODPhotography</span>
 									</a>
-									<a href="https://igosheva.github.io/JWood/" target="_blank" class="portfolio-item__link">Портфолио фотографа Jason Wood</a>
+									<a href="https://igosheva.github.io/JWood#start" target="_blank" class="portfolio-item__link">Портфолио фотографа Jason Wood</a>
 								</li>
+								<li class="portfolio-item">
+									<a href="https://igosheva.github.io/TestLoftSchool/" target="_blank" class="portfolio-item__image portfolio-item__loftblog">
+										<span class="image-name">LoftBlog</span>
+									</a>
+									<a href="https://igosheva.github.io/TestLoftSchool/" target="_blank" class="portfolio-item__link">Тестовое задание на продвинутый курс по веб-разработке LoftSchool</a>
+								</li>
+								<!--+b.LI.portfolio-item+e.A.image.__veeam(href='https://nastasiaiva.github.io/AVAILABILITY/main-page.html', target="_blank")
+	+b.SPAN.image-name Лендинг компании VEEAM
++e.A.link(href='https://nastasiaiva.github.io/AVAILABILITY/main-page.html', target="_blank") Лендинг компании VEEAM-->
+								<!--+b.LI.portfolio-item+e.A.image.__cat(href='https://nastasiaiva.github.io/Animation-cat/animation-cat.html', target="_blank")
+	+b.SPAN.image-name Анимация "Кот"
++e.A.link(href='https://nastasiaiva.github.io/Animation-cat/animation-cat.html', target="_blank") Анимация "Кот"-->
+								<!--+b.LI.portfolio-item+e.A.image.__new-project.js-show-project-->
 							</ul>
 						</div>
 					</section>
@@ -204,10 +219,16 @@
 						<div class="content-info">
 							<ul class="content-info__portfolio-list">
 								<li class="portfolio-item">
-									<a href="http://smsfinance.fullstack-development.com/review-1.html" target="_blank" class="portfolio-item__image portfolio-item__smsfinance">
+									<a href="http://fiatogroup.ru/" target="_blank" class="portfolio-item__image portfolio-item__fiatogroup">
+										<span class="image-name">Fiatogroup</span>
+									</a>
+									<a href="http://fiatogroup.ru/" target="_blank" class="portfolio-item__link">Сайт аренды коммерческой недвижимости</a>
+								</li>
+								<li class="portfolio-item">
+									<a href="https://www.smsfinance.ru/" target="_blank" class="portfolio-item__image portfolio-item__smsfinance">
 										<span class="image-name">Smsfinance</span>
 									</a>
-									<a href="http://smsfinance.fullstack-development.com/review-1.html" target="_blank" class="portfolio-item__link">Редизайн сайта компании Smsfinance</a>
+									<a href="https://www.smsfinance.ru/" target="_blank" class="portfolio-item__link">Редизайн сайта компании Smsfinance</a>
 								</li>
 								<li class="portfolio-item">
 									<a href="http://bkfon.ru/ru/" target="_blank" class="portfolio-item__image portfolio-item__bkfon">
@@ -225,6 +246,46 @@
 							</ul>
 						</div>
 					</section>
+				</div>
+				<div class="main-info js-main-info main-info__contacts">
+					<div class="contects-header">
+						<h2 class="contects-header__title contacts-title">У вас есть интересный проект? Я буду рада в нем поучаствовать!</h2>
+					</div>
+					<div class="main-info__block">
+						<div class="content-info">
+							<form id="contact-me" method="post" action="" class="contacts-form">
+								<div class="success-mes"></div>
+								<div class="error-mes"></div>
+								<fieldset class="contacts-form__item">
+									<input name="name" type="text" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя" qtip-position="left"
+										class="contacts-input" />
+									<label class="contacts-label">Имя</label>
+								</fieldset>
+								<fieldset class="contacts-form__item">
+									<input name="email" type="email" placeholder="Куда мне писать" qtip-content="Вы не ввели e-mail" qtip-position="right"
+										class="contacts-input" />
+									<label class="contacts-label">Email</label>
+								</fieldset>
+								<fieldset class="contacts-form__item contacts-form__textarea">
+									<textarea id="textarea" name="textarea" type="text" maxlength="500" placeholder="Опишите кратко суть проекта" qtip-content="Вы не описали суть проекта"
+										class="contacts-input contacts-textarea"></textarea>
+									<label class="contacts-label">Сообщение</label>
+									<div class="contacts-counter">
+										<span id="counter"></span>/500</div>
+								</fieldset>
+								<fieldset class="contacts-form__item">
+									<button type="reset" class="contacts-button disabled-button">
+										<span class="contacts-button__text">Очистить</span>
+									</button>
+								</fieldset>
+								<fieldset class="contacts-form__item">
+									<button type="submit" class="contacts-button">
+										<span class="contacts-button__text">Отправить</span>
+									</button>
+								</fieldset>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="cat">
@@ -255,7 +316,7 @@
 		</div>
 		<footer class="footer">
 			<div class="footer__wrapper">
-				<a class="footer__link js-show-authorization"></a>
+				<!--+b.A.footer__link.js-show-authorization-->
 				<span class="footer__content">© 2016, Игошева Анастасия</span>
 			</div>
 		</footer>
@@ -325,4 +386,5 @@
 		</div>
 	</body>
 	<script src="assets/scripts/app.min.js"></script>
+
 </html>
