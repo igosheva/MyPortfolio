@@ -62,7 +62,7 @@ let myModule = (function () {
 
 		//объявляем переменные
 		let form = $(this),
-				url = 'api/add_project.php',
+				url = 'add_project.php',
 				myServerGiveMeAnAnswer = _ajaxForm(form, url);
 
 		//ajax-запрос на сервер
